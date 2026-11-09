@@ -1,0 +1,5 @@
+# Working files, backups and exports (not part of the site)
+scratch/
+exports/
+.claude/
+.vscode/

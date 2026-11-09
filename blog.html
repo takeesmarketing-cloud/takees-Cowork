@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the best places to visit in Kannur including pristine beaches, historical forts, misty hill stations, Theyyam culture, food, and coworking spaces in North Kerala."
+    />
+    <title>Places to Visit in Kannur | Beaches, Forts, Hill Stations & Travel Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== Tokens: Takees Cowork font + colors, Horizon-style layout ===== */
+      :root {
+        --bg: #ffffff;
+        --panel: #f4f5f8;
+        --panel-2: #eef0f4;
+        --line: #e6e8ee;
+        --ink: #111111;
+        --ink-2: #1d1e22;
+        --text-main: #111216;
+        --text-muted: #6b6d80;
+        --yellow: #f4ed00;
+        --yellow-hover: #e8e100;
+        --lime: #dfe972;
+        --kicker: #5b2bb5;
+        --radius-lg: 28px;
+        --radius: 22px;
+        --radius-sm: 16px;
+        --max: 1240px;
+        --shadow: 0 18px 40px rgba(17, 18, 22, 0.08);
+        --ease: cubic-bezier(.2,.7,.25,1);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text-main);
+        font-family: "TASA Orbiter", sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button, input, textarea { font: inherit; }
+
+      .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+
+      h1, h2, h3, h4 {
+        margin: 0;
+        font-family: "TASA Orbiter", sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        color: var(--text-main);
+      }
+      p { margin: 0; }
+
+      /* Small pill tag used for section labels (like "About Horizon") */
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        padding: 7px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--kicker);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+      .tag.on-dark { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.16); color: #c9b6f2; }
+
+      /* Glass pill on photos */
+      .glass {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        padding: 7px 13px;
+        border: 1px solid rgba(255,255,255,.35);
+        border-radius: 999px;
+        background: rgba(255,255,255,.18);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      .glass.yellow { background: var(--yellow); border-color: var(--yellow); color: var(--ink); }
+
+      /* Round arrow button on cards */
+      .arrow-btn {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: var(--ink);
+        color: #fff;
+        font-size: 1rem;
+        transition: transform .25s var(--ease), background .2s ease;
+      }
+      .arrow-btn.light { background: #fff; color: var(--ink); }
+      a:hover > .arrow-btn, .arrow-btn:hover { transform: rotate(45deg); }
+
+      /* ===== Buttons ===== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 12px 22px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        line-height: 1.2;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .btn:focus-visible, .nav-btn:focus-visible, .menu-toggle:focus-visible, .submit-enquiry:focus-visible, summary:focus-visible {
+        outline: 2px solid var(--kicker);
+        outline-offset: 3px;
+      }
+      .btn-primary { background: var(--yellow); color: var(--ink); }
+      .btn-primary:hover { background: var(--yellow-hover); }
+      .btn-dark { background: var(--ink); color: #fff; }
+      .btn-dark:hover { background: var(--ink-2); }
+      .btn-outline { background: #fff; border-color: var(--line); color: var(--ink); }
+      .btn-glass {
+        background: rgba(255,255,255,.14);
+        border-color: rgba(255,255,255,.4);
+        color: #fff;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+      .btn-glass:hover { background: rgba(255,255,255,.24); }
+      .btn .btn-icon-svg { width: 14px; height: 14px; flex-shrink: 0; }
+      .btn-arrow::after { content: "↗"; font-size: 1em; }
+
+      /* ===== Header ===== */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(255,255,255,.88);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+      }
+      .topbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand { display: flex; align-items: center; width: fit-content; }
+      .brand-logo { width: 132px; height: auto; }
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 5px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .navlinks a {
+        padding: 8px 16px;
+        border-radius: 999px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        transition: background .2s ease, color .2s ease;
+      }
+      .navlinks a:hover { color: var(--ink); background: var(--panel); }
+      .navlinks a.is-active { color: #fff; background: var(--ink); }
+      .nav-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 20px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: background .2s ease;
+      }
+      .nav-btn::after { content: "↗"; }
+      .nav-btn:hover { background: var(--ink-2); }
+      .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: var(--ink);
+        cursor: pointer;
+        transition: background .2s ease;
+      }
+      .menu-toggle:hover { background: var(--ink-2); }
+      .menu-toggle span {
+        display: block;
+        flex: 0 0 auto;
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+        background: #fff;
+        transition: transform .25s ease, opacity .2s ease, width .25s ease;
+      }
+      header.nav-open .menu-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+      header.nav-open .menu-toggle span:nth-child(2) { opacity: 0; }
+      header.nav-open .menu-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+      /* ===== Hero: one big rounded photo with centered headline ===== */
+      .hero { padding: 8px 0 0; }
+      .hero-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: clamp(520px, 72vh, 680px);
+        padding: 96px 40px 120px;
+        border-radius: var(--radius-lg);
+        background: #1b1c20;
+        color: #fff;
+        text-align: center;
+        isolation: isolate;
+      }
+      .hero-card > img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+          linear-gradient(180deg, rgba(10,10,14,.55) 0%, rgba(10,10,14,.35) 45%, rgba(10,10,14,.75) 100%);
+      }
+      .hero-card h1 {
+        max-width: 880px;
+        color: #fff;
+        font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+        line-height: 1.08;
+      }
+      .hero-card .lead {
+        max-width: 620px;
+        margin-top: 18px;
+        color: rgba(255,255,255,.82);
+        font-size: 1.08rem;
+        line-height: 1.65;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .hero-foot {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 22px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .hero-highlights { display: flex; flex-wrap: wrap; gap: 8px; }
+      .hero-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+
+      /* Typewriter headline */
+      #hero-title.typewriter-active { position: relative; }
+      #hero-title.typewriter-active::before { content: attr(data-text); display: block; visibility: hidden; }
+      #hero-title .typewriter-text { display: block; }
+      #hero-title.typewriter-active .typewriter-text { position: absolute; inset: 0; }
+      #hero-title.typewriter-active .typewriter-text::after {
+        content: "";
+        display: inline-block;
+        height: 0.82em;
+        margin-left: 3px;
+        border-left: 2px solid currentColor;
+        vertical-align: -0.04em;
+        animation: hero-cursor-blink 0.8s steps(2, start) infinite;
+      }
+      @keyframes hero-cursor-blink { to { visibility: hidden; } }
+      #hero-title.typewriter-complete .typewriter-text::after { display: none; }
+
+      /* ===== Sections ===== */
+      .section { padding: 96px 0; }
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.9fr) 2.1fr;
+        gap: 24px 48px;
+        align-items: start;
+        margin-bottom: 44px;
+      }
+      .section-head h2 {
+        font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+        line-height: 1.16;
+      }
+      .section-head .intro {
+        margin-top: 16px;
+        color: var(--text-muted);
+        font-size: 1.05rem;
+      }
+      .section-head.split { grid-template-columns: 1fr auto; align-items: end; }
+      .section-head.split .tag { margin-bottom: 16px; }
+      .muted { color: var(--text-muted); }
+
+      /* Soft rounded panel like the membership/FAQ blocks */
+      .panel {
+        padding: clamp(28px, 4vw, 56px);
+        border-radius: var(--radius-lg);
+        background: var(--panel);
+      }
+
+      /* About */
+      .about-body {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.9fr) 2.1fr;
+        gap: 48px;
+        align-items: start;
+      }
+      .about-photo {
+        overflow: hidden;
+        border-radius: var(--radius);
+        aspect-ratio: 4 / 5;
+      }
+      .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+      .about-text { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; color: var(--text-muted); }
+      .about-text p:first-child { grid-column: 1 / -1; color: var(--text-main); font-size: 1.2rem; line-height: 1.55; }
+
+      /* Bento row */
+      .bento {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        margin-top: 48px;
+      }
+      .bento-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 300px;
+        padding: 24px;
+        border-radius: var(--radius);
+      }
+      .bento-card.dark { background: var(--ink); color: #fff; }
+      .bento-card.dark small { color: rgba(255,255,255,.6); font-size: 0.82rem; }
+      .bento-card.dark h3 { color: #fff; font-size: 1.45rem; line-height: 1.25; margin-top: 8px; }
+      .bento-card .toggle-row { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.75); font-size: 0.85rem; }
+      .bento-card .toggle {
+        position: relative;
+        width: 42px;
+        height: 24px;
+        border-radius: 999px;
+        background: var(--yellow);
+      }
+      .bento-card .toggle::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--ink);
+      }
+      .bento-card.photo { color: #fff; isolation: isolate; }
+      .bento-card.photo > img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .6s var(--ease);
+      }
+      .bento-card.photo::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.72) 100%);
+      }
+      .bento-card.photo:hover > img { transform: scale(1.04); }
+      .bento-card.photo h3 { color: #fff; font-size: 1.25rem; }
+      .bento-card.photo span { display: block; margin-top: 4px; color: rgba(255,255,255,.8); font-size: 0.88rem; }
+
+      /* Two-column feature (enterprise, podcast, virtual office, why) */
+      .feature {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: center;
+      }
+      .feature.reverse .feature-media { order: 2; }
+      .feature-media {
+        position: relative;
+        overflow: hidden;
+        min-height: 420px;
+        border-radius: var(--radius);
+      }
+      .feature-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .feature-media .glass { position: absolute; top: 18px; left: 18px; z-index: 1; }
+      .feature-copy h2 { margin: 16px 0 18px; font-size: clamp(1.8rem, 2.8vw, 2.5rem); line-height: 1.16; }
+      .feature-copy p { color: var(--text-muted); }
+      .feature-copy p + p { margin-top: 14px; }
+      .feature-copy .btn { margin-top: 26px; }
+
+      /* Workspaces: photo cards with glass tag + arrow */
+      .service-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+      .service-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 400px;
+        padding: 18px;
+        border-radius: var(--radius);
+        color: #fff;
+        isolation: isolate;
+      }
+      .service-card > img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .6s var(--ease);
+      }
+      .service-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(0,0,0,.05) 30%, rgba(0,0,0,.8) 100%);
+      }
+      .service-card:hover > img { transform: scale(1.05); }
+      .service-card h3 { color: #fff; font-size: 1.2rem; margin-bottom: 8px; }
+      .service-card p { color: rgba(255,255,255,.82); font-size: 0.88rem; line-height: 1.55; }
+
+      /* Amenities: soft cards with dark icon circle */
+      .amenity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+      .amenity {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding: 24px;
+        border-radius: var(--radius);
+        background: var(--panel);
+        transition: background .2s ease, transform .25s var(--ease);
+      }
+      .amenity:hover { background: var(--panel-2); transform: translateY(-3px); }
+      .amenity-icon {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: var(--yellow);
+        font-size: 1.15rem;
+      }
+      .amenity h3 { font-size: 1.1rem; margin-bottom: 6px; }
+      .amenity p { color: var(--text-muted); font-size: 0.92rem; }
+
+      /* Places */
+      .places { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+      .place-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 300px;
+        border-radius: var(--radius);
+        background: #1b1c20;
+        color: #fff;
+        isolation: isolate;
+      }
+      .place-card:nth-child(-n+3) { grid-column: span 2; }
+      .place-card:nth-child(n+4) { grid-column: span 3; }
+      .place-card img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .6s var(--ease);
+      }
+      .place-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.78));
+      }
+      .place-card:hover img { transform: scale(1.05); }
+      .place-card .body { position: absolute; left: 20px; right: 20px; bottom: 18px; }
+      .place-card h3 { color: #fff; font-size: 1.1rem; }
+      .place-card p { margin-top: 2px; color: rgba(255,255,255,.8); font-size: 0.85rem; }
+
+      /* Membership panel */
+      .membership {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: clamp(28px, 4vw, 56px);
+        align-items: start;
+      }
+      .membership-head { order: 2; position: sticky; top: 110px; }
+      .membership-head h2 { margin: 16px 0 12px; font-size: clamp(1.8rem, 2.8vw, 2.6rem); line-height: 1.16; }
+      .membership-head p { color: var(--text-muted); font-size: 1.05rem; }
+      .plan-list { display: grid; gap: 12px; }
+      .plan-featured {
+        padding: 28px;
+        border-radius: var(--radius);
+        background: var(--yellow);
+        color: var(--ink);
+        box-shadow: 0 18px 40px rgba(180, 170, 0, 0.22);
+      }
+      .plan-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+      .plan-chip {
+        display: inline-flex;
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      .plan-featured h3 { margin-top: 14px; font-size: 1.9rem; }
+      .plan-featured .plan-sub { margin-top: 4px; color: rgba(17,17,17,.72); }
+      .plan-price { display: flex; align-items: baseline; gap: 3px; white-space: nowrap; }
+      .plan-price .currency { font-size: 1.1rem; font-weight: 600; }
+      .plan-price strong { font-size: 2rem; font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+      .plan-price .period { font-size: 0.85rem; opacity: .75; }
+      .plan-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .plan-features li {
+        padding: 6px 12px;
+        border: 1px solid rgba(17,17,17,.18);
+        border-radius: 999px;
+        font-size: 0.82rem;
+      }
+      .plan-featured .btn { margin-top: 22px; }
+      .plan-row {
+        border-radius: var(--radius-sm);
+        background: #fff;
+      }
+      .plan-row summary {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+        cursor: pointer;
+        list-style: none;
+      }
+      .plan-row summary::-webkit-details-marker { display: none; }
+      .plan-row summary h3 { font-size: 1.15rem; font-weight: 500; }
+      .plan-row summary .meta { display: block; margin-top: 2px; color: var(--text-muted); font-size: 0.82rem; }
+      .plan-row .plan-price strong { font-size: 1.35rem; }
+      .view-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 14px;
+        border-radius: 999px;
+        background: var(--panel);
+        font-size: 0.82rem;
+        white-space: nowrap;
+        transition: background .2s ease;
+      }
+      .view-btn::after { content: "↗"; transition: transform .2s ease; }
+      .plan-row[open] .view-btn { background: var(--ink); color: #fff; }
+      .plan-row[open] .view-btn::after { transform: rotate(90deg); }
+      .plan-row .plan-detail { padding: 0 20px 20px; }
+      .plan-row .plan-detail p { color: var(--text-muted); font-size: 0.9rem; }
+      .plan-row .plan-features { margin-top: 12px; }
+      .plan-row .plan-features li { border-color: var(--line); background: var(--panel); }
+
+      /* Contact */
+      .contact-box {
+        display: grid;
+        grid-template-columns: 1fr 1.05fr;
+        gap: clamp(28px, 4vw, 56px);
+        align-items: start;
+      }
+      .contact-copy h2 { margin: 16px 0 14px; font-size: clamp(1.8rem, 2.8vw, 2.5rem); line-height: 1.16; }
+      .contact-copy > p { color: var(--text-muted); }
+      .contact-photo { overflow: hidden; height: 220px; margin-top: 24px; border-radius: var(--radius); }
+      .contact-photo img { width: 100%; height: 100%; object-fit: cover; }
+      .contact-details { display: grid; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+      .contact-details li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+        background: #fff;
+        font-size: 0.92rem;
+      }
+      .contact-details .ico {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: var(--ink);
+        color: var(--yellow);
+        font-size: 0.85rem;
+      }
+      .contact-details a:hover { text-decoration: underline; }
+      .contact-card { padding: 30px; border-radius: var(--radius); background: #fff; }
+      .contact-card h3 { font-size: 1.5rem; }
+      .contact-card > p { margin: 4px 0 22px; color: var(--text-muted); font-size: 0.9rem; }
+      .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; }
+      .field { display: grid; gap: 6px; }
+      .field.full { grid-column: 1 / -1; }
+      .field label, .space-fieldset legend { color: var(--text-main); font-size: 0.82rem; font-weight: 500; }
+      .space-fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+      .space-fieldset legend { margin-bottom: 6px; padding: 0; }
+      .field input {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--panel);
+        color: var(--text-main);
+        font-size: 0.92rem;
+      }
+      .field input:focus { outline: none; border-color: var(--ink); background: #fff; }
+      .choice-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+      .choice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--panel);
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: background .2s ease, border-color .2s ease;
+      }
+      .choice:has(input:checked) { background: var(--yellow); border-color: var(--yellow); }
+      .choice input { width: 16px; height: 16px; margin: 0; accent-color: var(--ink); }
+      .submit-enquiry {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        min-height: 50px;
+        margin-top: 18px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background .2s ease;
+      }
+      .submit-enquiry:hover { background: var(--ink-2); }
+      .submit-enquiry span { color: var(--yellow); }
+
+      /* CTA + footer: one dark rounded block */
+      .closing { padding: 0 0 24px; }
+      .closing-card {
+        overflow: hidden;
+        border-radius: var(--radius-lg);
+        background: var(--ink);
+        color: rgba(255,255,255,.72);
+      }
+      .cta-band {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 32px;
+        align-items: end;
+        padding: clamp(32px, 5vw, 64px);
+        border-bottom: 1px solid rgba(255,255,255,.1);
+      }
+      .cta-band h2 { margin-top: 16px; color: #fff; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.08; }
+      .cta-band p { margin-top: 14px; max-width: 460px; color: rgba(255,255,255,.72); }
+      .cta-side { display: grid; gap: 18px; justify-items: end; text-align: right; }
+      .cta-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+      .cta-address { max-width: 360px; color: rgba(255,255,255,.6); font-size: 0.85rem; }
+      .site-footer { padding: clamp(28px, 4vw, 48px) clamp(32px, 5vw, 64px) 24px; }
+      .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
+      .footer-brand .brand-logo { width: 110px; }
+      .footer-brand p, .footer-brand address { margin-top: 14px; max-width: 420px; font-size: 0.88rem; font-style: normal; line-height: 1.65; }
+      .footer-brand address a { display: inline-block; margin-top: 4px; color: #fff; }
+      .footer-col h4 { margin-bottom: 14px; color: #fff; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+      .pill-links { display: flex; flex-wrap: wrap; gap: 8px; }
+      .pill-links a {
+        padding: 8px 14px;
+        border: 1px solid rgba(255,255,255,.14);
+        border-radius: 999px;
+        color: rgba(255,255,255,.85);
+        font-size: 0.85rem;
+        transition: background .2s ease, color .2s ease;
+      }
+      .pill-links a:hover { background: #fff; color: var(--ink); }
+      .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 40px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255,255,255,.1);
+        color: rgba(255,255,255,.6);
+        font-size: 0.8rem;
+      }
+      .footer-legal { display: flex; gap: 20px; }
+
+      .floating-chat {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 60;
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #20c96b;
+        color: #fff;
+        box-shadow: 0 8px 22px rgba(0,0,0,.22);
+        transition: transform .2s ease;
+      }
+      .floating-chat:hover { transform: scale(1.06); }
+      .floating-chat svg { width: 24px; height: 24px; }
+
+      /* Scroll reveal */
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 600ms ease var(--reveal-delay, 0ms), transform 600ms var(--ease) var(--reveal-delay, 0ms);
+      }
+      .scroll-reveal.is-revealed { opacity: 1; transform: none; }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 1080px) {
+        .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .service-card { min-height: 340px; }
+      }
+      @media (max-width: 980px) {
+        .menu-toggle { display: inline-flex; }
+        .nav-btn { margin-left: auto; }
+        .navlinks { display: none; }
+        header.nav-open .navlinks {
+          display: flex;
+          position: absolute;
+          top: calc(100% + 4px);
+          left: 0;
+          right: 0;
+          transform: none;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 2px;
+          padding: 8px;
+          border-radius: var(--radius);
+          box-shadow: var(--shadow);
+        }
+        header.nav-open .navlinks a { padding: 12px 16px; font-size: 1rem; }
+        .section-head, .about-body, .feature, .membership, .contact-box, .cta-band { grid-template-columns: 1fr; }
+        .section-head.split { grid-template-columns: 1fr; align-items: start; }
+        .feature.reverse .feature-media { order: 0; }
+        .membership-head { order: 0; position: static; }
+        .about-photo { aspect-ratio: 16 / 10; }
+        .bento { grid-template-columns: 1fr 1fr; }
+        .bento-card.dark { grid-column: 1 / -1; min-height: 0; }
+        .amenity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .places { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .place-card:nth-child(n) { grid-column: span 1; }
+        .place-card:last-child { grid-column: 1 / -1; }
+        .cta-side { justify-items: start; text-align: left; }
+        .cta-actions { justify-content: flex-start; }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+        .footer-brand { grid-column: 1 / -1; }
+      }
+      @media (max-width: 640px) {
+        .wrap { width: calc(100% - 32px); }
+        .topbar { min-height: 66px; }
+        .brand-logo { width: 118px; }
+        .nav-btn { padding: 10px 14px; font-size: 0.85rem; }
+        .hero-card { min-height: 0; padding: 64px 20px 214px; border-radius: 22px; }
+        .hero-card .lead { font-size: 0.98rem; }
+        .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
+        .hero-foot { left: 16px; right: 16px; bottom: 16px; flex-direction: column; align-items: flex-start; }
+        .hero-badges { justify-content: flex-start; }
+        .section { padding: 64px 0; }
+        .about-text { grid-template-columns: 1fr; }
+        .about-text p:first-child { font-size: 1.08rem; }
+        .bento { grid-template-columns: 1fr; }
+        .bento-card { min-height: 240px; }
+        .service-grid, .amenity-grid { grid-template-columns: 1fr; }
+        .service-card { min-height: 300px; }
+        .feature-media { min-height: 280px; }
+        .places { gap: 10px; }
+        .place-card { min-height: 220px; }
+        .place-card .body { left: 14px; right: 14px; bottom: 12px; }
+        .place-card h3 { font-size: 0.95rem; }
+        .place-card p { font-size: 0.78rem; }
+        .panel { padding: 20px; border-radius: 22px; }
+        .plan-featured { padding: 22px; }
+        .plan-top { flex-direction: column; }
+        .plan-row summary { grid-template-columns: 1fr; gap: 10px; padding: 16px; }
+        .plan-row summary .view-btn { justify-self: start; }
+        .contact-card { padding: 22px 18px; }
+        .choice { font-size: 0.8rem; padding: 8px 6px; }
+        .cta-actions { flex-direction: column; align-items: stretch; width: 100%; }
+        .cta-side { justify-items: stretch; }
+        .footer-grid { grid-template-columns: 1fr; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+        .scroll-reveal { opacity: 1; transform: none; }
+      }
+
+      /* ===== Blog article (same system as homepage) ===== */
+      .article-hero-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: clamp(500px, 68vh, 620px);
+        padding: 110px 40px 110px;
+        border-radius: var(--radius-lg);
+        background: #1b1c20;
+        color: #fff;
+        text-align: center;
+        isolation: isolate;
+      }
+      .article-hero-card > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+      .article-hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(10,10,14,.6) 0%, rgba(10,10,14,.35) 45%, rgba(10,10,14,.75) 100%);
+      }
+      .hero-top {
+        position: absolute;
+        top: 20px;
+        left: 22px;
+        right: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+      .breadcrumb a, .breadcrumb span { color: #fff; }
+      .breadcrumb .sep { opacity: .6; }
+      .breadcrumb a:hover { text-decoration: underline; }
+      .back-link { gap: 6px; }
+      .back-link:hover { background: rgba(255,255,255,.28); }
+      .article-hero-card .tag { margin-bottom: 18px; }
+      .article-title {
+        max-width: 920px;
+        color: #fff;
+        font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+        line-height: 1.1;
+      }
+      .article-lead {
+        max-width: 700px;
+        margin-top: 18px;
+        color: rgba(255,255,255,.84);
+        font-size: 1.08rem;
+        line-height: 1.65;
+      }
+      .featured-badge { position: absolute; left: 22px; bottom: 20px; }
+      .featured-badge strong { font-weight: 600; margin-right: 4px; }
+
+      .article-meta-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 16px;
+        padding: 12px 12px 12px 14px;
+        border-radius: 999px;
+        background: var(--panel);
+      }
+      .author-info { display: flex; align-items: center; gap: 12px; }
+      .author-avatar {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        padding: 9px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .author-avatar img { width: 100%; height: 100%; object-fit: contain; }
+      .author-name { font-weight: 600; font-size: 0.95rem; line-height: 1.2; }
+      .article-date { color: var(--text-muted); font-size: 0.82rem; }
+      .article-share { display: flex; flex-wrap: wrap; gap: 8px; }
+      .share-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        min-height: 42px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: #fff;
+        font-size: 0.88rem;
+        font-weight: 500;
+        transition: background .2s ease, color .2s ease;
+      }
+      .share-btn::after { content: "↗"; }
+      .share-btn:hover { background: var(--ink); color: #fff; }
+
+      .article-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 340px;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: start;
+        padding: 72px 0 96px;
+      }
+      .article-body { color: #3c3e4a; font-size: 1.05rem; line-height: 1.8; }
+      .article-body p { margin: 0 0 20px; }
+      .article-body h2 {
+        margin: 56px 0 16px;
+        font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+        line-height: 1.16;
+      }
+      .article-body h2:first-of-type { margin-top: 36px; }
+      .article-body h3 { margin: 32px 0 10px; font-size: 1.3rem; }
+      .article-body a[href="index.html"] { text-decoration-color: var(--yellow) !important; text-decoration-thickness: 3px !important; }
+      .content-figure { position: relative; margin: 26px 0 34px; overflow: hidden; border-radius: var(--radius); }
+      .content-figure img { width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+      .content-figure figcaption {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        width: fit-content;
+        max-width: calc(100% - 28px);
+        padding: 8px 14px;
+        border: 1px solid rgba(255,255,255,.35);
+        border-radius: 999px;
+        background: rgba(17,17,17,.45);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        font-size: 0.82rem;
+        line-height: 1.4;
+      }
+
+      .callout-box {
+        margin: 32px 0;
+        padding: 26px;
+        border-radius: var(--radius);
+        background: var(--panel);
+        color: var(--text-main);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+      .callout-box .tag { margin-bottom: 12px; }
+      .callout-box.dark { background: var(--ink); color: rgba(255,255,255,.75); }
+      .callout-box.dark h4 { margin-bottom: 6px; color: #fff; font-size: 1.35rem; }
+      .callout-box.dark p { margin: 0; }
+
+      .facts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 36px 0 0; }
+      .fact-item { padding: 22px; border-radius: var(--radius); background: var(--panel); }
+      .fact-item span { display: block; margin-bottom: 6px; color: var(--text-muted); font-size: 0.82rem; }
+      .fact-item strong { color: var(--text-main); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; }
+
+      .article-sidebar { position: sticky; top: 100px; display: grid; gap: 14px; }
+      .sidebar-card { padding: 22px; border-radius: var(--radius); background: var(--panel); }
+      .sidebar-card .tag { margin-bottom: 14px; }
+      .toc-list { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+      .toc-list a {
+        display: block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #fff;
+        color: var(--text-main);
+        font-size: 0.9rem;
+        transition: background .2s ease, color .2s ease;
+      }
+      .toc-list a:hover { background: var(--ink); color: #fff; }
+      .sidebar-card .brochure-text { margin: 0 0 16px; color: var(--text-muted); font-size: 0.9rem; }
+      .sidebar-card .btn { width: 100%; }
+      .cowork-promo-card { padding: 24px; border-radius: var(--radius); background: var(--yellow); color: var(--ink); }
+      .cowork-promo-card h3 { font-size: 1.5rem; }
+      .cowork-promo-card p { margin: 8px 0 18px; color: rgba(17,17,17,.75); font-size: 0.92rem; }
+      .cowork-promo-card .btn { width: 100%; }
+
+      .article-cta-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+
+      @media (max-width: 992px) {
+        .article-layout { grid-template-columns: 1fr; gap: 40px; }
+        .article-sidebar { position: static; }
+      }
+      @media (max-width: 640px) {
+        .article-hero-card { min-height: 0; padding: 120px 18px 92px; border-radius: 22px; }
+        .hero-top { top: 14px; left: 14px; right: 14px; }
+        .article-title { font-size: clamp(1.9rem, 8.5vw, 2.4rem); }
+        .article-lead { font-size: 0.98rem; }
+        .featured-badge { left: 14px; right: 14px; bottom: 14px; border-radius: 16px; }
+        .article-meta-bar { flex-direction: column; align-items: flex-start; border-radius: 22px; padding: 16px; }
+        .article-layout { padding: 48px 0 64px; }
+        .article-body { font-size: 1rem; }
+        .content-figure figcaption { position: static; max-width: none; margin-top: 8px; border: 0; border-radius: 0; background: none; color: var(--text-muted); padding: 0 4px; backdrop-filter: none; -webkit-backdrop-filter: none; }
+        .content-figure { overflow: visible; border-radius: 0; }
+        .content-figure img { border-radius: 18px; }
+        .facts-grid { grid-template-columns: 1fr; }
+        .article-cta-actions { flex-direction: column; align-items: stretch; width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="wrap topbar">
+        <a href="index.html#home" class="brand" aria-label="Takees Cowork home">
+          <img class="brand-logo" src="./Cowork%20logo%20header.png" alt="Takees Cowork Logo" />
+        </a>
+
+        <nav class="navlinks" id="site-nav" aria-label="Primary navigation">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#amenities">Amenities</a>
+          <a href="index.html#plans">Plan</a>
+          <a href="blog.html" class="is-active" aria-current="page">Blogs</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <a class="nav-btn" href="https://wa.me/+918848330091" target="_blank" rel="noopener noreferrer">Chat with us</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Article hero -->
+      <div class="article-hero-card">
+        <img src="./Payyambalam%20Beach.jpg" alt="Golden shores of Payyambalam Beach in Kannur" />
+        <div class="hero-top">
+          <nav class="breadcrumb glass" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep">/</span>
+            <a href="index.html#places">Blogs</a>
+            <span class="sep">/</span>
+            <span>Places to visit in Kannur</span>
+          </nav>
+          <a href="index.html#places" class="back-link glass">
+            <span aria-hidden="true">←</span> Back to Overview
+          </a>
+        </div>
+        <span class="tag on-dark">Explore Malabar • Travel &amp; Work Guide</span>
+        <h1 class="article-title">Places to Visit in Kannur | Beaches, Forts, Hill Stations &amp; Travel Guide</h1>
+        <p class="article-lead">
+          Explore the best places to visit in Kannur including peaceful beaches, 16th-century forts, misty hill stations, authentic Theyyam culture, Malabar cuisine, and modern coworking hubs in North Kerala.
+        </p>
+        <div class="featured-badge glass">
+          <strong>North Kerala Coastline</strong> • Iconic Arabian Sea Shoreline
+        </div>
+      </div>
+
+      <div class="article-meta-bar">
+        <div class="author-info">
+          <div class="author-avatar" title="Takees Cowork">
+            <img src="./takees-t-logo.png" alt="Takees Cowork" />
+          </div>
+          <div>
+            <div class="author-name">Takees Cowork Team</div>
+            <div class="article-date">Published on May 26, 2026 • 5 min read • North Kerala Travel</div>
+          </div>
+        </div>
+        <div class="article-share">
+          <a class="share-btn" href="https://wa.me/?text=Check%20out%20this%20guide%20to%20Places%20to%20Visit%20in%20Kannur%20by%20Takees%20Cowork!" target="_blank" rel="noopener noreferrer">
+            <span>Share WhatsApp</span>
+          </a>
+          <a class="share-btn" href="Brochure%20@cowork.pdf" download="Takees-Cowork-Brochure.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Brochure PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Article Content + Sidebar Layout -->
+      <div class="article-layout">
+        <article class="article-body">
+          <p>
+            Kannur, located on the northern coast of Kerala, is one of the most beautiful and culturally rich destinations in South India. Known for its peaceful beaches, historic forts, traditional art forms, and lush greenery, Kannur offers a perfect mix of nature, heritage, and relaxation. If you are searching for the best places to visit in Kannur, this guide will help you explore the beauty and charm of this coastal city.
+          </p>
+
+          <h2 id="why-kannur">Why Kannur is Famous?</h2>
+          <p>
+            Kannur is often called the cultural capital of North Kerala. The district is known for its traditional art forms like Theyyam, handloom industries, historical monuments, and scenic landscapes. The calm environment and natural beauty make Kannur one of the top travel destinations in Kerala.
+          </p>
+          <p>
+            Today, many visitors come here not only for tourism but also for relaxation and work-life balance. Modern spaces like <a href="index.html" style="font-weight:700; text-decoration: underline; text-underline-offset: 3px;">Takees Cowork</a> are helping professionals and freelancers work comfortably while enjoying the peaceful surroundings of Kannur.
+          </p>
+
+          <div class="callout-box">
+            <span class="tag">Digital Nomad Tip</span><br>
+            <strong>Combine Travel &amp; Work:</strong> Kannur boasts airport connectivity (Kannur International Airport - CNN) just minutes away from Mele Chovva, where Takees Cowork provides high-speed gigabit fiber and quiet desks for travelers wanting a workation.
+          </div>
+
+          <h2 id="beaches">Beaches: The Most Beautiful Places to Visit in Kannur</h2>
+          <p>
+            Beaches are among the top places to visit in Kannur because of their clean surroundings and relaxing atmosphere.
+          </p>
+
+          <h3>1. Payyambalam Beach</h3>
+          <p>
+            Payyambalam Beach is one of the most visited beaches in the city. The beach is famous for its golden sand, sunset views, and peaceful vibe. It is one of the best places to visit in Kannur for evening walks, photography, and coastal breeze.
+          </p>
+          <figure class="content-figure">
+            <img src="./Payyambalam%20Beach.jpg" alt="Enjoy the peaceful atmosphere and scenic shoreline of Payyambalam Beach in Kannur." loading="lazy" />
+            <figcaption>Enjoy the peaceful atmosphere and scenic shoreline of Payyambalam Beach in Kannur.</figcaption>
+          </figure>
+
+          <h3>2. Muzhappilangad Drive-In Beach</h3>
+          <p>
+            Muzhappilangad Driving Beach is one of the longest driving beaches in Asia (extending over 4 kilometers). Visitors can drive vehicles directly along the firm beach sands, enjoy coastal water sports, and catch panoramic sea views. This destination is always included in lists of top places to visit in Kannur.
+          </p>
+          <figure class="content-figure">
+            <img src="./Muzhappilangad%20Drive-In%20Beach.jpg" alt="Experience India's longest drive-in beach with breathtaking coastal views." loading="lazy" />
+            <figcaption>Experience Asia's longest drive-in coastline with firm sands and stunning sunset drives.</figcaption>
+          </figure>
+
+          <h3>3. Meenkunnu Beach</h3>
+          <p>
+            Meenkunnu Beach is perfect for travellers who love quiet and less crowded locations. The natural beauty and calm atmosphere make it one of the hidden gems to visit in Kannur for relaxation away from the crowds.
+          </p>
+
+          <h2 id="historical-places">Historical Places to Visit in Kannur</h2>
+          <p>
+            Kannur has a rich historical background influenced by the Portuguese, the Dutch, and local kingdoms. Many travellers explore these historical places to understand the region’s heritage.
+          </p>
+
+          <h3>St. Angelo Fort</h3>
+          <p>
+            St. Angelo Fort is one of the oldest and most famous forts in Kerala. Built by the Portuguese in 1505 and later fortified by the Dutch and British, the fort offers commanding views of the Arabian Sea and the natural harbor of Mopila Bay. It remains one of the top-rated historical places to visit in Kannur.
+          </p>
+          <figure class="content-figure">
+            <img src="./St.%20Angelo%20Fort.jpg" alt="Explore the rich history and sea-facing views of St. Angelo Fort in Kannur." loading="lazy" />
+            <figcaption>Explore the rich 16th-century history and sea-facing ramparts of St. Angelo Fort.</figcaption>
+          </figure>
+
+          <h3>Kannur Lighthouse</h3>
+          <p>
+            Standing adjacent to Payyambalam Beach, the Kannur Lighthouse offers visitors a 360-degree panoramic vantage point overlooking the Arabian Sea, rocky promontories, and swaying coconut groves.
+          </p>
+          <figure class="content-figure">
+            <img src="./Kannur%20Lighthouse.webp" alt="Kannur Lighthouse overlooking the Arabian Sea" loading="lazy" />
+            <figcaption>Panoramic Arabian Sea vantage point and maritime museum at Kannur Lighthouse.</figcaption>
+          </figure>
+
+          <h2 id="hill-stations">Hill Stations and Nature Destinations</h2>
+          <p>
+            Nature lovers can explore several green, misty, and scenic spots nestled in the Western Ghat ranges and plateaus of Kannur.
+          </p>
+
+          <h3>Madayipara Hill Station</h3>
+          <p>
+            Madayipara is a bio-diverse laterite hill plateau renowned for rare wildflowers, ancient shrines, and as a revered backdrop for sacred Theyyam performances and seasonal birdwatching.
+          </p>
+          <figure class="content-figure">
+            <img src="./Madayipara%20Hill%20Station.png" alt="Theyyam ritual dancer surrounded by the lush green landscape of Madayipara" loading="lazy" />
+            <figcaption>Theyyam performer amidst the serene biodiversity of Madayipara Plateau.</figcaption>
+          </figure>
+
+          <h3>Palakkayam Thattu</h3>
+          <p>
+            Palakkayam Thattu is a breathtaking hill station surrounded by misty mountains and lush forests. Trekking, camping, and photography are popular activities here. Sitting at an altitude of approximately 3,500 feet, it is one of the coolest places to visit in Kannur during weekends.
+          </p>
+
+          <h3>Paithalmala</h3>
+          <p>
+            Paithalmala is another scenic hill station known for trekking trails and panoramic valley views. During monsoon and winter, the hills become blanketed with clouds, creating an enchanting, magical atmosphere for nature enthusiasts.
+          </p>
+
+          <h2 id="culture">Cultural Attractions &amp; Theyyam</h2>
+          <p>
+            Kannur is deeply connected to Kerala’s rich culture and spiritual traditions. Visitors can experience sacred ritual performances, vibrant festivals, and local artistry.
+          </p>
+
+          <h3>Theyyam Rituals</h3>
+          <p>
+            Theyyam is one of the most celebrated ritual dance forms in Kerala, recognized internationally for its striking face makeup, towering headgear, and profound spiritual energy. Watching a live Theyyam performance in local kavus (sacred groves) is an unforgettable experience.
+          </p>
+
+          <h3>Food Experience in Kannur</h3>
+          <p>
+            Kannur is globally famed for authentic Malabar culinary treasures. From fresh coastal seafood, fragrant Thalassery biriyani, and soft pathiris to evening Malabar tea snacks, exploring local food stalls and dining spots is an essential part of visiting Kannur.
+          </p>
+
+          <h2 id="shopping">Shopping and Local Markets in Kannur</h2>
+          <p>
+            Apart from beaches and tourist attractions, shopping is also an enjoyable experience in Kannur. The city is famous for handloom products, traditional fabrics, spices, and handmade crafts. Visitors can explore local markets and textile shops to experience the authentic craftsmanship of North Kerala.
+          </p>
+          <p>
+            Kannur handloom products are popular across India because of their superior quality and traditional weaving techniques. Many travellers purchase bedsheets, cotton fabrics, and traditional Kerala clothing as souvenirs.
+          </p>
+
+          <h2 id="remote-work">Kannur for Remote Workers and Digital Nomads</h2>
+          <p>
+            In recent years, Kannur has become increasingly attractive for freelancers, entrepreneurs, and remote workers. The combination of affordable living, calm surroundings, internet accessibility, and beautiful landscapes creates a productive lifestyle.
+          </p>
+          <p>
+            Coworking spaces such as <a href="index.html" style="font-weight:700; text-decoration: underline; text-underline-offset: 3px;">Takees Cowork</a> provide modern, hospitality-grade work environments for professionals visiting the city. With dedicated hot desks, ergonomic cubicles, high-speed dual fiber Wi-Fi, and 100% power backup, you can manage critical client work and zoom sprints while enjoying Kannur's coastal charm.
+          </p>
+
+          <div class="callout-box dark">
+            <span class="tag on-dark">Takees Cowork Kannur</span>
+            <h4>Work Smart in Kannur</h4>
+            <p>
+              Located on Airport Road, Mele Chovva (opposite Cindrebay School of Design). Get day passes from ₹300 or month passes with complete business facilities.
+            </p>
+          </div>
+
+          <h2 id="best-time">Best Time to Visit Kannur</h2>
+          <p>
+            The best time to explore the places to visit in Kannur is from <strong>October to March</strong>. During this season, the weather is pleasant with clear skies, mild temperatures, and optimal conditions for sightseeing, beach strolls, and hill station treks.
+          </p>
+
+          <h2>Conclusion</h2>
+          <p>
+            Kannur is a perfect destination for travellers looking for beaches, nature, culture, and history. From drive-in coastlines and 16th-century forts to misty mountain peaks and traditional art forms, there are incredible places to visit in Kannur for every type of visitor.
+          </p>
+          <p>
+            If you are planning a trip to Kerala or seeking a calm coastal city for a productive workation, make sure to experience the timeless beauty of Kannur.
+          </p>
+
+          <!-- Quick Facts -->
+          <div class="facts-grid">
+            <div class="fact-item">
+              <span>Nearest Airport</span>
+              <strong>Kannur Int'l (CNN) • 25 km</strong>
+            </div>
+            <div class="fact-item">
+              <span>Major Railway Station</span>
+              <strong>Kannur Main (CAN) • 4 km</strong>
+            </div>
+            <div class="fact-item">
+              <span>Best Visiting Season</span>
+              <strong>October to March</strong>
+            </div>
+            <div class="fact-item">
+              <span>Coworking Hub</span>
+              <strong>Takees Cowork, Mele Chovva</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar">
+          <div class="sidebar-card">
+            <span class="tag">Table of Contents</span>
+            <ul class="toc-list">
+              <li><a href="#why-kannur">1. Why Kannur is Famous</a></li>
+              <li><a href="#beaches">2. Beautiful Beaches</a></li>
+              <li><a href="#historical-places">3. Historical Forts</a></li>
+              <li><a href="#hill-stations">4. Hill Stations &amp; Hills</a></li>
+              <li><a href="#culture">5. Culture &amp; Theyyam</a></li>
+              <li><a href="#shopping">6. Shopping &amp; Markets</a></li>
+              <li><a href="#remote-work">7. Remote Work &amp; Coworking</a></li>
+              <li><a href="#best-time">8. Best Time to Visit</a></li>
+            </ul>
+          </div>
+
+          <div class="cowork-promo-card">
+            <h3>Visiting Kannur?</h3>
+            <p>Work from a premium air-conditioned desk with high-speed fiber Wi-Fi and power backup right on Airport Road.</p>
+            <a href="https://wa.me/+918848330091?text=Hi%2C%20I%20am%20visiting%20Kannur%20and%20would%20like%20to%20book%20a%20day%20pass%20at%20Takees%20Cowork." class="btn btn-dark btn-arrow" target="_blank" rel="noopener noreferrer">
+              Book a Day Pass (₹300)
+            </a>
+          </div>
+
+          <div class="sidebar-card">
+            <span class="tag">Official Brochure</span>
+            <p class="brochure-text">
+              Download the complete Takees Cowork brochure covering pricing, cubicles, virtual office, and enterprise solutions.
+            </p>
+            <a href="Brochure%20@cowork.pdf" download="Takees-Cowork-Brochure.pdf" class="btn btn-dark">
+              Download Brochure
+            </a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- CTA + footer -->
+    <div class="closing">
+      <div class="wrap">
+        <div class="closing-card">
+          <section class="cta-band article-cta">
+            <div>
+              <span class="tag on-dark">Takees Cowork Kannur</span>
+              <h2>Start Your Journey With Takees Cowork</h2>
+              <p>
+                Whether you need a dedicated desk for remote work, a private cabin, or a meeting room in Kannur, we provide everything you need to stay productive.
+              </p>
+            </div>
+            <div class="cta-side">
+              <div class="article-cta-actions">
+                <a href="https://wa.me/+918848330091" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                <a href="index.html#plans" class="btn btn-glass">Explore Plans</a>
+                <a href="index.html#contact" class="btn btn-glass">Contact Us</a>
+              </div>
+            </div>
+          </section>
+
+          <footer class="site-footer">
+            <div class="footer-grid">
+              <div class="footer-brand">
+                <a href="index.html#home" class="brand" aria-label="Takees Cowork home">
+                  <img class="brand-logo" src="./Cowork%20logo%20(1).png" alt="Takees Cowork" />
+                </a>
+                <p>You run the business. We run the workspace. Comprehensive digital and physical infrastructure for ambitious teams in Kannur &amp; Bangalore.</p>
+                <address>
+                  Takees Park, Airport Road, Mele Chovva, Kannur, Kerala 670006<br>
+                  <a href="tel:+918848330091">+91 88483 30091</a>
+                </address>
+              </div>
+              <div class="footer-col">
+                <h4>Sister Brands</h4>
+                <div class="pill-links">
+                  <a href="https://takees.in/" target="_blank" rel="noopener noreferrer">Takees Marketing</a>
+                  <a href="https://takeescowork.com/" target="_blank" rel="noopener noreferrer">Takees Co-work</a>
+                  <a href="https://takees.in/" target="_blank" rel="noopener noreferrer">Takees Estates</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              <span>© 2026 Takees Cowork. All rights reserved. Powered by Takees Marketing.</span>
+              <div class="footer-legal">
+                <span>Privacy Policy</span>
+                <span>Terms of Service</span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a class="floating-chat" href="https://wa.me/+918848330091" target="_blank" rel="noopener noreferrer" aria-label="Chat with Takees Cowork on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20 11.7a8.1 8.1 0 0 1-11.9 7.1L4 20l1.2-4a8.1 8.1 0 1 1 14.8-4.3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M9 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.1.4 0 .6.5.8 1.2 1.5 2 1.9.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1-.6 1.3-.4.4-1 .6-1.6.5-1-.1-2.1-.6-3.3-1.7-1.3-1.1-2-2.4-2.3-3.4-.3-.9 0-1.7.4-2.2Z" fill="currentColor"/>
+      </svg>
+    </a>
+    <script>
+      // Phone menu toggle
+      (() => {
+        const header = document.querySelector("header");
+        const toggle = header.querySelector(".menu-toggle");
+        const setOpen = (open) => {
+          header.classList.toggle("nav-open", open);
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        };
+        toggle.addEventListener("click", () => setOpen(!header.classList.contains("nav-open")));
+        header.querySelectorAll(".navlinks a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+      })();
+    </script>
+  </body>
+</html>
