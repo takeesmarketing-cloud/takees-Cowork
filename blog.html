@@ -176,7 +176,18 @@
       }
       .btn-glass:hover { background: rgba(255,255,255,.24); }
       .btn .btn-icon-svg { width: 14px; height: 14px; flex-shrink: 0; }
-      .btn-arrow::after { content: "↗"; font-size: 1em; }
+
+      /* Arrow drawn as a line icon (phones show the arrow character as a colored emoji) */
+      .btn-arrow::after, .nav-btn::after, .view-btn::after, .share-btn::after {
+        content: "";
+        display: inline-block;
+        flex-shrink: 0;
+        width: 0.95em;
+        height: 0.95em;
+        background: currentColor;
+        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
+      }
 
       /* ===== Header ===== */
       header {
@@ -230,7 +241,6 @@
         font-weight: 500;
         transition: background .2s ease;
       }
-      .nav-btn::after { content: "↗"; }
       .nav-btn:hover { background: var(--ink-2); }
       .menu-toggle {
         display: none;
@@ -641,7 +651,7 @@
         white-space: nowrap;
         transition: background .2s ease;
       }
-      .view-btn::after { content: "↗"; transition: transform .2s ease; }
+      .view-btn::after { transition: transform .2s ease; }
       .plan-row[open] .view-btn { background: var(--ink); color: #fff; }
       .plan-row[open] .view-btn::after { transform: rotate(90deg); }
       .plan-row .plan-detail { padding: 0 20px 20px; }
@@ -990,7 +1000,6 @@
         font-weight: 500;
         transition: background .2s ease, color .2s ease;
       }
-      .share-btn::after { content: "↗"; }
       .share-btn:hover { background: var(--ink); color: #fff; }
 
       .article-layout {
