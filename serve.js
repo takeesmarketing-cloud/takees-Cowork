@@ -23,7 +23,10 @@ const mimeTypes = {
 http.createServer((req, res) => {
   const rawUrl = req.url || '/';
   const safeUrl = decodeURIComponent(rawUrl.split('?')[0]);
-  const filePath = safeUrl === '/' ? path.join(root, 'index.html') : path.join(root, safeUrl);
+  let filePath = safeUrl === '/' ? path.join(root, 'index.html') : path.join(root, safeUrl);
+
+  // Clean URLs: /places-to-visit-in-Kannur serves places-to-visit-in-Kannur.html
+  if (!path.extname(filePath) && fs.existsSync(filePath + ".html")) filePath += ".html";
 
   fs.readFile(filePath, (err, data) => {
     if (err) {
