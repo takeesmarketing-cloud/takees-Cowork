@@ -1721,9 +1721,15 @@
       })();
     </script>
     <script>
-      // Clean section addresses: /home /about /amenities /plan /contact scroll to their section
+      // Clean section addresses: /home /about /amenities /plan /places /contact scroll to their section
       (() => {
-        const routes = { home: "home", about: "about", amenities: "amenities", plan: "plans", contact: "contact" };
+        const routes = { home: "home", about: "about", amenities: "amenities", plan: "plans", places: "places", contact: "contact" };
+        // Old links like /#about or /#plans: switch the address to /about, /plan
+        if (location.hash) {
+          const id = decodeURIComponent(location.hash.slice(1));
+          const key = Object.keys(routes).find((k) => routes[k] === id);
+          history.replaceState(null, "", key ? "/" + key : location.pathname + location.search);
+        }
         const keyOf = (path) => path.replace(/^\/+|\/+$/g, "");
         const go = (key, smooth) => {
           const el = document.getElementById(routes[key]);

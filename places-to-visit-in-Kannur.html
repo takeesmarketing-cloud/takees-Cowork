@@ -1154,7 +1154,7 @@
             <span class="sep">/</span>
             <span>Places to visit in Kannur</span>
           </nav>
-          <a href="/#places" class="back-link glass">
+          <a href="/places" class="back-link glass">
             <span aria-hidden="true">←</span> Back to Overview
           </a>
         </div>
@@ -1455,6 +1455,24 @@
         <path d="M9 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.1.4 0 .6.5.8 1.2 1.5 2 1.9.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1-.6 1.3-.4.4-1 .6-1.6.5-1-.1-2.1-.6-3.3-1.7-1.3-1.1-2-2.4-2.3-3.4-.3-.9 0-1.7.4-2.2Z" fill="currentColor"/>
       </svg>
     </a>
+    <script>
+      // Table of contents: scroll to the section without adding #section to the address
+      (() => {
+        if (location.hash) {
+          const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+          history.replaceState(null, "", location.pathname + location.search);
+          if (target) window.addEventListener("load", () => target.scrollIntoView({ behavior: "instant" }));
+        }
+        document.addEventListener("click", (e) => {
+          const a = e.target.closest('a[href^="#"]');
+          if (!a) return;
+          const target = document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)));
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+        });
+      })();
+    </script>
     <script>
       // Phone menu toggle
       (() => {
