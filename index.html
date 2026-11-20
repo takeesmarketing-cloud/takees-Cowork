@@ -1097,12 +1097,12 @@
   <body>
     <header>
       <div class="wrap topbar">
-        <a href="/home" class="brand" aria-label="Takees Cowork home">
+        <a href="/" class="brand" aria-label="Takees Cowork home">
           <img class="brand-logo" src="./Cowork%20logo%20header.png" alt="Takees Cowork logo">
         </a>
 
         <nav class="navlinks" id="site-nav" aria-label="Primary navigation">
-          <a href="/home" class="is-active">Home</a>
+          <a href="/" class="is-active">Home</a>
           <a href="/about">About</a>
           <a href="/amenities">Amenities</a>
           <a href="/plan">Plan</a>
@@ -1594,7 +1594,7 @@
           <footer class="site-footer">
             <div class="footer-grid">
               <div class="footer-brand">
-                <a href="/home" class="brand" aria-label="Takees Cowork home">
+                <a href="/" class="brand" aria-label="Takees Cowork home">
                   <img class="brand-logo" src="./Cowork%20logo%20(1).png" alt="Takees Cowork logo">
                 </a>
                 <p>You run the business. We run the workspace. Comprehensive digital and physical infrastructure for ambitious teams in Kannur &amp; Bangalore.</p>
@@ -1721,16 +1721,19 @@
       })();
     </script>
     <script>
-      // Clean section addresses: /home /about /amenities /plan /places /contact scroll to their section
+      // Clean section addresses: / (home), /about /amenities /plan /places /contact scroll to their section
       (() => {
+        const urlFor = (key) => (key === "home" ? "/" : "/" + key);
+        // Old /home address: show just the domain
+        if (location.pathname === "/home") history.replaceState(null, "", "/" + location.hash);
         const routes = { home: "home", about: "about", amenities: "amenities", plan: "plans", places: "places", contact: "contact" };
         // Old links like /#about or /#plans: switch the address to /about, /plan
         if (location.hash) {
           const id = decodeURIComponent(location.hash.slice(1));
           const key = Object.keys(routes).find((k) => routes[k] === id);
-          history.replaceState(null, "", key ? "/" + key : location.pathname + location.search);
+          history.replaceState(null, "", key ? urlFor(key) : location.pathname + location.search);
         }
-        const keyOf = (path) => path.replace(/^\/+|\/+$/g, "");
+        const keyOf = (path) => path.replace(/^\/+|\/+$/g, "") || "home";
         const go = (key, smooth) => {
           const el = document.getElementById(routes[key]);
           if (!el) return;
@@ -1762,7 +1765,7 @@
           const key = keyOf(url.pathname);
           if (url.origin !== location.origin || !routes[key]) return;
           e.preventDefault();
-          if (keyOf(location.pathname) !== key) history.pushState(null, "", "/" + key);
+          if (location.pathname !== urlFor(key)) history.pushState(null, "", urlFor(key));
           go(key, true);
         });
         window.addEventListener("popstate", () => {
