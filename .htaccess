@@ -10,6 +10,9 @@ RewriteRule ^ / [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+([^?\s]+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,L]
 
+# Homepage sections: /home /about /amenities /plan /contact
+RewriteRule ^(home|about|amenities|plan|contact)$ index.html [L]
+
 # Serve the page for the clean address: /blogs -> blogs.html
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f

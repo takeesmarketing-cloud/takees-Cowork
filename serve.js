@@ -25,6 +25,8 @@ http.createServer((req, res) => {
   const safeUrl = decodeURIComponent(rawUrl.split('?')[0]);
   let filePath = safeUrl === '/' ? path.join(root, 'index.html') : path.join(root, safeUrl);
 
+  // Homepage sections: /home /about /amenities /plan /contact
+  if (/^\/(home|about|amenities|plan|contact)$/.test(safeUrl)) filePath = path.join(root, 'index.html');
   // Clean URLs: /places-to-visit-in-Kannur serves places-to-visit-in-Kannur.html
   if (!path.extname(filePath) && fs.existsSync(filePath + ".html")) filePath += ".html";
 
