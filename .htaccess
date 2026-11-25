@@ -13,6 +13,10 @@ RewriteRule ^ /%1 [R=301,L]
 # Old /home address -> just the domain
 RewriteRule ^home$ / [R=301,L]
 
+# Blog address ending in a slash: /why-people-are-switching-their-workspace-from-home/
+RewriteRule ^why-people-are-switching-their-workspace-from-home$ /why-people-are-switching-their-workspace-from-home/ [R=301,L]
+RewriteRule ^why-people-are-switching-their-workspace-from-home/$ why-people-are-switching-their-workspace-from-home.html [L]
+
 # Homepage sections: /about /amenities /plan /places /contact
 RewriteRule ^(about|amenities|plan|places|contact)$ index.html [L]
 

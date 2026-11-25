@@ -29,7 +29,10 @@ http.createServer((req, res) => {
 
   // Homepage sections: /about /amenities /plan /places /contact (/home goes to /)
   if (/^\/(home|about|amenities|plan|places|contact)$/.test(safeUrl)) filePath = path.join(root, 'index.html');
-  // Clean URLs: /places-to-visit-in-Kannur serves places-to-visit-in-Kannur.html
+  // Blog address ending in a slash
+  if (safeUrl === '/why-people-are-switching-their-workspace-from-home') { res.writeHead(301, { Location: safeUrl + '/' }); res.end(); return; }
+  if (safeUrl === '/why-people-are-switching-their-workspace-from-home/') filePath = path.join(root, 'why-people-are-switching-their-workspace-from-home.html');
+  // Clean URLs:/places-to-visit-in-Kannur serves places-to-visit-in-Kannur.html
   if (!path.extname(filePath) && fs.existsSync(filePath + ".html")) filePath += ".html";
 
   fs.readFile(filePath, (err, data) => {
