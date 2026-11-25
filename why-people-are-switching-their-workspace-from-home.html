@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Working from home isn&#39;t working for everyone. Here&#39;s why remote workers, freelancers and startups are moving to coworking spaces, and what they get."
+    />
+    <title>Why People Are Switching Their Workspace from Home | Takees Cowork</title>
+    <link rel="canonical" href="https://takeescowork.com/why-people-are-switching-their-workspace-from-home" />
+    <!-- Browser tab icon -->
+    <link rel="icon" type="image/png" href="/takees-t-logo.png" />
+    <link rel="apple-touch-icon" href="/takees-t-logo.png" />
+    <!-- Link previews (WhatsApp, LinkedIn, Facebook, X) -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Takees Cowork" />
+    <meta property="og:title" content="Why People Are Switching Their Workspace from Home | Takees Cowork" />
+    <meta property="og:description" content="Working from home isn&#39;t working for everyone. Here&#39;s why remote workers, freelancers and startups are moving to coworking spaces, and what they get." />
+    <meta property="og:url" content="https://takeescowork.com/why-people-are-switching-their-workspace-from-home" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80" />
+    <meta property="og:image:alt" content="People working at shared desks in a busy coworking space" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Why People Are Switching Their Workspace from Home | Takees Cowork" />
+    <meta name="twitter:description" content="Working from home isn&#39;t working for everyone. Here&#39;s why remote workers, freelancers and startups are moving to coworking spaces, and what they get." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== Tokens: Takees Cowork font + colors, Horizon-style layout ===== */
+      :root {
+        --bg: #ffffff;
+        --panel: #f4f5f8;
+        --panel-2: #eef0f4;
+        --line: #e6e8ee;
+        --ink: #111111;
+        --ink-2: #1d1e22;
+        --text-main: #111216;
+        --text-muted: #6b6d80;
+        --yellow: #f4ed00;
+        --yellow-hover: #e8e100;
+        --lime: #dfe972;
+        --kicker: #5b2bb5;
+        --radius-lg: 28px;
+        --radius: 22px;
+        --radius-sm: 16px;
+        --max: 1240px;
+        --shadow: 0 18px 40px rgba(17, 18, 22, 0.08);
+        --ease: cubic-bezier(.2,.7,.25,1);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text-main);
+        font-family: "TASA Orbiter", sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button, input, textarea { font: inherit; }
+
+      .wrap { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+
+      h1, h2, h3, h4 {
+        margin: 0;
+        font-family: "TASA Orbiter", sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        color: var(--text-main);
+      }
+      p { margin: 0; }
+
+      /* Small pill tag used for section labels (like "About Horizon") */
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        padding: 7px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--kicker);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+      .tag.on-dark { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.16); color: #c9b6f2; }
+
+      /* Glass pill on photos */
+      .glass {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        padding: 7px 13px;
+        border: 1px solid rgba(255,255,255,.35);
+        border-radius: 999px;
+        background: rgba(255,255,255,.18);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      .glass.yellow { background: var(--yellow); border-color: var(--yellow); color: var(--ink); }
+
+      /* Round arrow button on cards */
+      .arrow-btn {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: var(--ink);
+        color: #fff;
+        font-size: 1rem;
+        transition: transform .25s var(--ease), background .2s ease;
+      }
+      .arrow-btn.light { background: #fff; color: var(--ink); }
+      a:hover > .arrow-btn, .arrow-btn:hover { transform: rotate(45deg); }
+
+      /* ===== Buttons ===== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 46px;
+        padding: 12px 22px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        line-height: 1.2;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .btn:focus-visible, .nav-btn:focus-visible, .menu-toggle:focus-visible, .submit-enquiry:focus-visible, summary:focus-visible {
+        outline: 2px solid var(--kicker);
+        outline-offset: 3px;
+      }
+      .btn-primary { background: var(--yellow); color: var(--ink); }
+      .btn-primary:hover { background: var(--yellow-hover); }
+      /* Important (yellow) buttons: white circle with arrow on the right */
+      .btn-primary {
+        position: relative; min-height: 50px; padding: 12px 54px 12px 24px; font-weight: 600;
+        box-shadow: 0 0 0 1px rgba(244,237,0,.35), 0 8px 28px rgba(244,237,0,.45), 0 0 48px rgba(244,237,0,.25);
+        transition: transform .2s ease, background .2s ease, box-shadow .25s ease;
+      }
+      .btn-primary:hover { box-shadow: 0 0 0 1px rgba(244,237,0,.5), 0 10px 34px rgba(244,237,0,.6), 0 0 64px rgba(244,237,0,.35); }
+      .btn-primary::after {
+        content: "›";
+        position: absolute;
+        right: 6px;
+        top: 50%;
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--ink);
+        font-size: 1.3rem;
+        line-height: 1;
+        transform: translateY(-50%);
+        transition: transform .2s ease;
+      }
+      .btn-primary:hover::after { transform: translate(3px, -50%); }
+      .btn-dark { background: var(--ink); color: #fff; }
+      .btn-dark:hover { background: var(--ink-2); }
+      .btn-outline { background: #fff; border-color: var(--line); color: var(--ink); }
+      .btn-glass {
+        background: rgba(255,255,255,.14);
+        border-color: rgba(255,255,255,.4);
+        color: #fff;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+      }
+      .btn-glass:hover { background: rgba(255,255,255,.24); }
+      .btn .btn-icon-svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+      /* Arrow drawn as a line icon (phones show the arrow character as a colored emoji) */
+      .btn-arrow::after, .nav-btn::after, .view-btn::after, .share-btn::after {
+        content: "";
+        display: inline-block;
+        flex-shrink: 0;
+        width: 0.95em;
+        height: 0.95em;
+        background: currentColor;
+        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
+      }
+
+      /* ===== Header ===== */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(255,255,255,.88);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+      }
+      .topbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        min-height: 76px;
+      }
+      .brand { display: flex; align-items: center; width: fit-content; }
+      .brand-logo { width: 132px; height: auto; }
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 5px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .navlinks a {
+        padding: 8px 16px;
+        border-radius: 999px;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        transition: background .2s ease, color .2s ease;
+      }
+      .navlinks a:hover { color: var(--ink); background: var(--panel); }
+      .navlinks a.is-active { color: #fff; background: var(--ink); }
+      .nav-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 20px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: background .2s ease;
+      }
+      .nav-btn:hover { background: var(--ink-2); }
+      .menu-toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: var(--ink);
+        cursor: pointer;
+        transition: background .2s ease;
+      }
+      .menu-toggle:hover { background: var(--ink-2); }
+      .menu-toggle span {
+        display: block;
+        flex: 0 0 auto;
+        width: 18px;
+        height: 2px;
+        border-radius: 2px;
+        background: #fff;
+        transition: transform .25s ease, opacity .2s ease, width .25s ease;
+      }
+      header.nav-open .menu-toggle span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+      header.nav-open .menu-toggle span:nth-child(2) { opacity: 0; }
+      header.nav-open .menu-toggle span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+      /* ===== Hero: one big rounded photo with centered headline ===== */
+      .hero { padding: 8px 0 0; }
+      .hero-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: clamp(520px, 72vh, 680px);
+        padding: 96px 40px 120px;
+        border-radius: var(--radius-lg);
+        background: #1b1c20;
+        color: #fff;
+        text-align: center;
+        isolation: isolate;
+      }
+      .hero-card > img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+          linear-gradient(180deg, rgba(10,10,14,.55) 0%, rgba(10,10,14,.35) 45%, rgba(10,10,14,.75) 100%);
+      }
+      .hero-card h1 {
+        max-width: 880px;
+        color: #fff;
+        font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+        line-height: 1.08;
+      }
+      .hero-card .lead {
+        max-width: 620px;
+        margin-top: 18px;
+        color: rgba(255,255,255,.82);
+        font-size: 1.08rem;
+        line-height: 1.65;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .hero-foot {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 22px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .hero-highlights { display: flex; flex-wrap: wrap; gap: 8px; }
+      .hero-badges { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+
+      /* Typewriter headline */
+      #hero-title.typewriter-active { position: relative; }
+      #hero-title.typewriter-active::before { content: attr(data-text); display: block; visibility: hidden; }
+      #hero-title .typewriter-text { display: block; }
+      #hero-title.typewriter-active .typewriter-text { position: absolute; inset: 0; }
+      #hero-title.typewriter-active .typewriter-text::after {
+        content: "";
+        display: inline-block;
+        height: 0.82em;
+        margin-left: 3px;
+        border-left: 2px solid currentColor;
+        vertical-align: -0.04em;
+        animation: hero-cursor-blink 0.8s steps(2, start) infinite;
+      }
+      @keyframes hero-cursor-blink { to { visibility: hidden; } }
+      #hero-title.typewriter-complete .typewriter-text::after { display: none; }
+
+      /* ===== Sections ===== */
+      .section { padding: 96px 0; }
+      .section-head {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.9fr) 2.1fr;
+        gap: 24px 48px;
+        align-items: start;
+        margin-bottom: 44px;
+      }
+      .section-head h2 {
+        font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+        line-height: 1.16;
+      }
+      .section-head .intro {
+        margin-top: 16px;
+        color: var(--text-muted);
+        font-size: 1.05rem;
+      }
+      .section-head.split { grid-template-columns: 1fr auto; align-items: end; }
+      .section-head.split .tag { margin-bottom: 16px; }
+      .muted { color: var(--text-muted); }
+
+      /* Soft rounded panel like the membership/FAQ blocks */
+      .panel {
+        padding: clamp(28px, 4vw, 56px);
+        border-radius: var(--radius-lg);
+        background: var(--panel);
+      }
+
+      /* About */
+      .about-body {
+        display: grid;
+        grid-template-columns: minmax(180px, 0.9fr) 2.1fr;
+        gap: 48px;
+        align-items: start;
+      }
+      .about-photo {
+        overflow: hidden;
+        border-radius: var(--radius);
+        aspect-ratio: 4 / 5;
+      }
+      .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+      .about-text { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; color: var(--text-muted); }
+      .about-text p:first-child { grid-column: 1 / -1; color: var(--text-main); font-size: 1.2rem; line-height: 1.55; }
+
+      /* Bento row */
+      .bento {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        margin-top: 48px;
+      }
+      .bento-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+        min-height: 300px;
+        padding: 24px;
+        border-radius: var(--radius);
+      }
+      .bento-card.dark { background: var(--ink); color: #fff; }
+      .bento-card.dark small { color: rgba(255,255,255,.6); font-size: 0.82rem; }
+      .bento-card.dark h3 { color: #fff; font-size: 1.45rem; line-height: 1.25; margin-top: 8px; }
+      .bento-card .toggle-row { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.75); font-size: 0.85rem; }
+      .bento-card .toggle {
+        position: relative;
+        width: 42px;
+        height: 24px;
+        border-radius: 999px;
+        background: var(--yellow);
+      }
+      .bento-card .toggle::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--ink);
+      }
+      .bento-card.photo { color: #fff; isolation: isolate; }
+      .bento-card.photo > img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .6s var(--ease);
+      }
+      .bento-card.photo::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.72) 100%);
+      }
+      .bento-card.photo:hover > img { transform: scale(1.04); }
+      .bento-card.photo h3 { color: #fff; font-size: 1.25rem; }
+      .bento-card.photo span { display: block; margin-top: 4px; color: rgba(255,255,255,.8); font-size: 0.88rem; }
+
+      /* Two-column feature (enterprise, podcast, virtual office, why) */
+      .feature {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: center;
+      }
+      .feature.reverse .feature-media { order: 2; }
+      .feature-media {
+        position: relative;
+        overflow: hidden;
+        min-height: 420px;
+        border-radius: var(--radius);
+      }
+      .feature-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .feature-media .glass { position: absolute; top: 18px; left: 18px; z-index: 1; }
+      .feature-copy h2 { margin: 16px 0 18px; font-size: clamp(1.8rem, 2.8vw, 2.5rem); line-height: 1.16; }
+      .feature-copy p { color: var(--text-muted); }
+      .feature-copy p + p { margin-top: 14px; }
+      .feature-copy .btn { margin-top: 26px; }
+
+      /* Workspaces: photo cards with glass tag + arrow */
+      .service-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+      .service-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        min-height: 400px;
+        padding: 18px;
+        border-radius: var(--radius);
+        color: #fff;
+        isolation: isolate;
+      }
+      .service-card > img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .6s var(--ease);
+      }
+      .service-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(0,0,0,.05) 30%, rgba(0,0,0,.8) 100%);
+      }
+      .service-card:hover > img { transform: scale(1.05); }
+      .service-card h3 { color: #fff; font-size: 1.2rem; margin-bottom: 8px; }
+      .service-card p { color: rgba(255,255,255,.82); font-size: 0.88rem; line-height: 1.55; }
+
+      /* Amenities: soft cards with dark icon circle */
+      .amenity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+      .amenity {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        padding: 24px;
+        border-radius: var(--radius);
+        background: var(--panel);
+        transition: background .2s ease, transform .25s var(--ease);
+      }
+      .amenity:hover { background: var(--panel-2); transform: translateY(-3px); }
+      .amenity-icon {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: var(--yellow);
+        font-size: 1.15rem;
+      }
+      .amenity h3 { font-size: 1.1rem; margin-bottom: 6px; }
+      .amenity p { color: var(--text-muted); font-size: 0.92rem; }
+
+      /* Places */
+      .places { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+      .place-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 300px;
+        border-radius: var(--radius);
+        background: #1b1c20;
+        color: #fff;
+        isolation: isolate;
+      }
+      .place-card:nth-child(-n+3) { grid-column: span 2; }
+      .place-card:nth-child(n+4) { grid-column: span 3; }
+      .place-card img {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .6s var(--ease);
+      }
+      .place-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.78));
+      }
+      .place-card:hover img { transform: scale(1.05); }
+      .place-card .body { position: absolute; left: 20px; right: 20px; bottom: 18px; }
+      .place-card h3 { color: #fff; font-size: 1.1rem; }
+      .place-card p { margin-top: 2px; color: rgba(255,255,255,.8); font-size: 0.85rem; }
+
+      /* Membership panel */
+      .membership {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: clamp(28px, 4vw, 56px);
+        align-items: start;
+      }
+      .membership-head { order: 2; position: sticky; top: 110px; }
+      .membership-head h2 { margin: 16px 0 12px; font-size: clamp(1.8rem, 2.8vw, 2.6rem); line-height: 1.16; }
+      .membership-head p { color: var(--text-muted); font-size: 1.05rem; }
+      .plan-list { display: grid; gap: 12px; }
+      .plan-featured {
+        padding: 28px;
+        border-radius: var(--radius);
+        background: var(--yellow);
+        color: var(--ink);
+        box-shadow: 0 18px 40px rgba(180, 170, 0, 0.22);
+      }
+      .plan-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+      .plan-chip {
+        display: inline-flex;
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      .plan-featured h3 { margin-top: 14px; font-size: 1.9rem; }
+      .plan-featured .plan-sub { margin-top: 4px; color: rgba(17,17,17,.72); }
+      .plan-price { display: flex; align-items: baseline; gap: 3px; white-space: nowrap; }
+      .plan-price .currency { font-size: 1.1rem; font-weight: 600; }
+      .plan-price strong { font-size: 2rem; font-weight: 600; letter-spacing: -0.04em; line-height: 1; }
+      .plan-price .period { font-size: 0.85rem; opacity: .75; }
+      .plan-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 22px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .plan-features li {
+        padding: 6px 12px;
+        border: 1px solid rgba(17,17,17,.18);
+        border-radius: 999px;
+        font-size: 0.82rem;
+      }
+      .plan-featured .btn { margin-top: 22px; }
+      .plan-row {
+        border-radius: var(--radius-sm);
+        background: #fff;
+      }
+      .plan-row summary {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+        cursor: pointer;
+        list-style: none;
+      }
+      .plan-row summary::-webkit-details-marker { display: none; }
+      .plan-row summary h3 { font-size: 1.15rem; font-weight: 500; }
+      .plan-row summary .meta { display: block; margin-top: 2px; color: var(--text-muted); font-size: 0.82rem; }
+      .plan-row .plan-price strong { font-size: 1.35rem; }
+      .view-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 14px;
+        border-radius: 999px;
+        background: var(--panel);
+        font-size: 0.82rem;
+        white-space: nowrap;
+        transition: background .2s ease;
+      }
+      .view-btn::after { transition: transform .2s ease; }
+      .plan-row[open] .view-btn { background: var(--ink); color: #fff; }
+      .plan-row[open] .view-btn::after { transform: rotate(90deg); }
+      .plan-row .plan-detail { padding: 0 20px 20px; }
+      .plan-row .plan-detail p { color: var(--text-muted); font-size: 0.9rem; }
+      .plan-row .plan-features { margin-top: 12px; }
+      .plan-row .plan-features li { border-color: var(--line); background: var(--panel); }
+
+      /* Contact */
+      .contact-box {
+        display: grid;
+        grid-template-columns: 1fr 1.05fr;
+        gap: clamp(28px, 4vw, 56px);
+        align-items: start;
+      }
+      .contact-copy h2 { margin: 16px 0 14px; font-size: clamp(1.8rem, 2.8vw, 2.5rem); line-height: 1.16; }
+      .contact-copy > p { color: var(--text-muted); }
+      .contact-photo { overflow: hidden; height: 220px; margin-top: 24px; border-radius: var(--radius); }
+      .contact-photo img { width: 100%; height: 100%; object-fit: cover; }
+      .contact-details { display: grid; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+      .contact-details li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+        background: #fff;
+        font-size: 0.92rem;
+      }
+      .contact-details .ico {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: var(--ink);
+        color: var(--yellow);
+        font-size: 0.85rem;
+      }
+      .contact-details a:hover { text-decoration: underline; }
+      .contact-card { padding: 30px; border-radius: var(--radius); background: #fff; }
+      .contact-card h3 { font-size: 1.5rem; }
+      .contact-card > p { margin: 4px 0 22px; color: var(--text-muted); font-size: 0.9rem; }
+      .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 12px; }
+      .field { display: grid; gap: 6px; }
+      .field.full { grid-column: 1 / -1; }
+      .field label, .space-fieldset legend { color: var(--text-main); font-size: 0.82rem; font-weight: 500; }
+      .space-fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+      .space-fieldset legend { margin-bottom: 6px; padding: 0; }
+      .field input {
+        width: 100%;
+        min-height: 48px;
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--panel);
+        color: var(--text-main);
+        font-size: 0.92rem;
+      }
+      .field input:focus { outline: none; border-color: var(--ink); background: #fff; }
+      .choice-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+      .choice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--panel);
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: background .2s ease, border-color .2s ease;
+      }
+      .choice:has(input:checked) { background: var(--yellow); border-color: var(--yellow); }
+      .choice input { width: 16px; height: 16px; margin: 0; accent-color: var(--ink); }
+      .submit-enquiry {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        min-height: 50px;
+        margin-top: 18px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background .2s ease;
+      }
+      .submit-enquiry:hover { background: var(--ink-2); }
+      .submit-enquiry span { color: var(--yellow); }
+
+      /* CTA + footer: one dark rounded block */
+      .closing { padding: 0 0 24px; }
+      .closing-card {
+        overflow: hidden;
+        border-radius: var(--radius-lg);
+        background: var(--ink);
+        color: rgba(255,255,255,.72);
+      }
+      .cta-band {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 32px;
+        align-items: end;
+        padding: clamp(32px, 5vw, 64px);
+        border-bottom: 1px solid rgba(255,255,255,.1);
+      }
+      .cta-band h2 { margin-top: 16px; color: #fff; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.08; }
+      .cta-band p { margin-top: 14px; max-width: 460px; color: rgba(255,255,255,.72); }
+      .cta-side { display: grid; gap: 18px; justify-items: end; text-align: right; }
+      .cta-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+      .cta-address { max-width: 360px; color: rgba(255,255,255,.6); font-size: 0.85rem; }
+      .site-footer { padding: clamp(28px, 4vw, 48px) clamp(32px, 5vw, 64px) 24px; }
+      .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; }
+      .footer-brand .brand-logo { width: 110px; }
+      .footer-brand p, .footer-brand address { margin-top: 14px; max-width: 420px; font-size: 0.88rem; font-style: normal; line-height: 1.65; }
+      .footer-brand address a { display: inline-block; margin-top: 4px; color: #fff; }
+      .footer-col h4 { margin-bottom: 14px; color: #fff; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+      .pill-links { display: flex; flex-wrap: wrap; gap: 8px; }
+      .pill-links a {
+        padding: 8px 14px;
+        border: 1px solid rgba(255,255,255,.14);
+        border-radius: 999px;
+        color: rgba(255,255,255,.85);
+        font-size: 0.85rem;
+        transition: background .2s ease, color .2s ease;
+      }
+      .pill-links a:hover { background: #fff; color: var(--ink); }
+      .powered-link { color: inherit; font-weight: 700; text-decoration: none; }
+      .powered-link:hover { text-decoration: underline; }
+      .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 40px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255,255,255,.1);
+        color: rgba(255,255,255,.6);
+        font-size: 0.8rem;
+      }
+      .footer-legal { display: flex; gap: 20px; }
+
+      .floating-chat {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 60;
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #20c96b;
+        color: #fff;
+        box-shadow: 0 8px 22px rgba(0,0,0,.22);
+        transition: transform .2s ease;
+      }
+      .floating-chat:hover { transform: scale(1.06); }
+      .floating-chat svg { width: 24px; height: 24px; }
+
+      /* Scroll reveal */
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 600ms ease var(--reveal-delay, 0ms), transform 600ms var(--ease) var(--reveal-delay, 0ms);
+      }
+      .scroll-reveal.is-revealed { opacity: 1; transform: none; }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 1080px) {
+        .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .service-card { min-height: 340px; }
+      }
+      @media (max-width: 980px) {
+        .menu-toggle { display: inline-flex; }
+        .nav-btn { margin-left: auto; }
+        .navlinks { display: none; }
+        header.nav-open .navlinks {
+          display: flex;
+          position: absolute;
+          top: calc(100% + 4px);
+          left: 0;
+          right: 0;
+          transform: none;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 2px;
+          padding: 8px;
+          border-radius: var(--radius);
+          box-shadow: var(--shadow);
+        }
+        header.nav-open .navlinks a { padding: 12px 16px; font-size: 1rem; }
+        .section-head, .about-body, .feature, .membership, .contact-box, .cta-band { grid-template-columns: 1fr; }
+        .section-head.split { grid-template-columns: 1fr; align-items: start; }
+        .feature.reverse .feature-media { order: 0; }
+        .membership-head { order: 0; position: static; }
+        .about-photo { aspect-ratio: 16 / 10; }
+        .bento { grid-template-columns: 1fr 1fr; }
+        .bento-card.dark { grid-column: 1 / -1; min-height: 0; }
+        .amenity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .places { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .place-card:nth-child(n) { grid-column: span 1; }
+        .place-card:last-child { grid-column: 1 / -1; }
+        .cta-side { justify-items: start; text-align: left; }
+        .cta-actions { justify-content: flex-start; }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+        .footer-brand { grid-column: 1 / -1; }
+      }
+      @media (max-width: 640px) {
+        .wrap { width: calc(100% - 32px); }
+        .topbar { min-height: 66px; }
+        .brand-logo { width: 118px; }
+        .nav-btn { padding: 10px 14px; font-size: 0.85rem; }
+        .hero-card { min-height: 0; padding: 64px 20px 214px; border-radius: 22px; }
+        .hero-card .lead { font-size: 0.98rem; }
+        .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
+        .hero-foot { left: 16px; right: 16px; bottom: 16px; flex-direction: column; align-items: flex-start; }
+        .hero-badges { justify-content: flex-start; }
+        .section { padding: 64px 0; }
+        .about-text { grid-template-columns: 1fr; }
+        .about-text p:first-child { font-size: 1.08rem; }
+        .bento { grid-template-columns: 1fr; }
+        .bento-card { min-height: 240px; }
+        .service-grid, .amenity-grid { grid-template-columns: 1fr; }
+        .service-card { min-height: 300px; }
+        .feature-media { min-height: 280px; }
+        .places { gap: 10px; }
+        .place-card { min-height: 220px; }
+        .place-card .body { left: 14px; right: 14px; bottom: 12px; }
+        .place-card h3 { font-size: 0.95rem; }
+        .place-card p { font-size: 0.78rem; }
+        .panel { padding: 20px; border-radius: 22px; }
+        .plan-featured { padding: 22px; }
+        .plan-top { flex-direction: column; }
+        .plan-row summary { grid-template-columns: 1fr; gap: 10px; padding: 16px; }
+        .plan-row summary .view-btn { justify-self: start; }
+        .contact-card { padding: 22px 18px; }
+        .choice { font-size: 0.8rem; padding: 8px 6px; }
+        .cta-actions { flex-direction: column; align-items: stretch; width: 100%; }
+        .cta-side { justify-items: stretch; }
+        .footer-grid { grid-template-columns: 1fr; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation: none !important; transition: none !important; }
+        .scroll-reveal { opacity: 1; transform: none; }
+      }
+
+      /* ===== Blog article (same system as homepage) ===== */
+      .article-hero-card {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: clamp(500px, 68vh, 620px);
+        padding: 110px 40px 110px;
+        border-radius: var(--radius-lg);
+        background: #1b1c20;
+        color: #fff;
+        text-align: center;
+        isolation: isolate;
+      }
+      .article-hero-card > img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+      .article-hero-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(10,10,14,.6) 0%, rgba(10,10,14,.35) 45%, rgba(10,10,14,.75) 100%);
+      }
+      .hero-top {
+        position: absolute;
+        top: 20px;
+        left: 22px;
+        right: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+      .breadcrumb a, .breadcrumb span { color: #fff; }
+      .breadcrumb .sep { opacity: .6; }
+      .breadcrumb a:hover { text-decoration: underline; }
+      .back-link { gap: 6px; }
+      .back-link:hover { background: rgba(255,255,255,.28); }
+      .article-hero-card .tag { margin-bottom: 18px; }
+      .article-title {
+        max-width: 920px;
+        color: #fff;
+        font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+        line-height: 1.1;
+      }
+      .article-lead {
+        max-width: 700px;
+        margin-top: 18px;
+        color: rgba(255,255,255,.84);
+        font-size: 1.08rem;
+        line-height: 1.65;
+      }
+      .featured-badge { position: absolute; left: 22px; bottom: 20px; }
+      .featured-badge strong { font-weight: 600; margin-right: 4px; }
+
+      .article-meta-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 16px;
+        padding: 12px 12px 12px 14px;
+        border-radius: 999px;
+        background: var(--panel);
+      }
+      .author-info { display: flex; align-items: center; gap: 12px; }
+      .author-avatar {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        padding: 9px;
+        border-radius: 50%;
+        background: #fff;
+      }
+      .author-avatar img { width: 100%; height: 100%; object-fit: contain; }
+      .author-name { font-weight: 600; font-size: 0.95rem; line-height: 1.2; }
+      .article-date { color: var(--text-muted); font-size: 0.82rem; }
+      .article-share { display: flex; flex-wrap: wrap; gap: 8px; }
+      .share-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        min-height: 42px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: #fff;
+        font-size: 0.88rem;
+        font-weight: 500;
+        transition: background .2s ease, color .2s ease;
+      }
+      .share-btn:hover { background: var(--ink); color: #fff; }
+
+      .article-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 340px;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: start;
+        padding: 72px 0 96px;
+      }
+      .article-body { color: #3c3e4a; font-size: 1.05rem; line-height: 1.8; }
+      .article-body p { margin: 0 0 20px; }
+      .article-body h2 {
+        margin: 56px 0 16px;
+        font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+        line-height: 1.16;
+      }
+      .article-body h2:first-of-type { margin-top: 36px; }
+      .article-body h3 { margin: 32px 0 10px; font-size: 1.3rem; }
+      .article-body a[href="/"] { text-decoration-color: var(--yellow) !important; text-decoration-thickness: 3px !important; }
+      .content-figure { position: relative; margin: 26px 0 34px; overflow: hidden; border-radius: var(--radius); }
+      .content-figure img { width: 100%; height: auto; max-height: 460px; object-fit: cover; }
+      .content-figure figcaption {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        width: fit-content;
+        max-width: calc(100% - 28px);
+        padding: 8px 14px;
+        border: 1px solid rgba(255,255,255,.35);
+        border-radius: 999px;
+        background: rgba(17,17,17,.45);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        font-size: 0.82rem;
+        line-height: 1.4;
+      }
+
+      .callout-box {
+        margin: 32px 0;
+        padding: 26px;
+        border-radius: var(--radius);
+        background: var(--panel);
+        color: var(--text-main);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+      .callout-box .tag { margin-bottom: 12px; }
+      .callout-box.dark { background: var(--ink); color: rgba(255,255,255,.75); }
+      .callout-box.dark h4 { margin-bottom: 6px; color: #fff; font-size: 1.35rem; }
+      .callout-box.dark p { margin: 0; }
+
+      .facts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 36px 0 0; }
+      .fact-item { padding: 22px; border-radius: var(--radius); background: var(--panel); }
+      .fact-item span { display: block; margin-bottom: 6px; color: var(--text-muted); font-size: 0.82rem; }
+      .fact-item strong { color: var(--text-main); font-size: 1.15rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; }
+
+      .article-sidebar { position: sticky; top: 100px; display: grid; gap: 14px; }
+      .sidebar-card { padding: 22px; border-radius: var(--radius); background: var(--panel); }
+      .sidebar-card .tag { margin-bottom: 14px; }
+      .toc-list { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+      .toc-list a {
+        display: block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #fff;
+        color: var(--text-main);
+        font-size: 0.9rem;
+        transition: background .2s ease, color .2s ease;
+      }
+      .toc-list a:hover { background: var(--ink); color: #fff; }
+      .sidebar-card .brochure-text { margin: 0 0 16px; color: var(--text-muted); font-size: 0.9rem; }
+      .sidebar-card .btn { width: 100%; }
+      .cowork-promo-card { padding: 24px; border-radius: var(--radius); background: var(--yellow); color: var(--ink); }
+      .cowork-promo-card h3 { font-size: 1.5rem; }
+      .cowork-promo-card p { margin: 8px 0 18px; color: rgba(17,17,17,.75); font-size: 0.92rem; }
+      .cowork-promo-card .btn { width: 100%; }
+
+      .article-cta-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+
+      @media (max-width: 992px) {
+        .article-layout { grid-template-columns: 1fr; gap: 40px; }
+        .article-sidebar { position: static; }
+      }
+      @media (max-width: 640px) {
+        .article-hero-card { min-height: 0; padding: 120px 18px 92px; border-radius: 22px; }
+        .hero-top { top: 14px; left: 14px; right: 14px; }
+        .article-title { font-size: clamp(1.9rem, 8.5vw, 2.4rem); }
+        .article-lead { font-size: 0.98rem; }
+        .featured-badge { left: 14px; right: 14px; bottom: 14px; border-radius: 16px; }
+        .article-meta-bar { flex-direction: column; align-items: flex-start; border-radius: 22px; padding: 16px; }
+        .article-layout { padding: 48px 0 64px; }
+        .article-body { font-size: 1rem; }
+        .content-figure figcaption { position: static; max-width: none; margin-top: 8px; border: 0; border-radius: 0; background: none; color: var(--text-muted); padding: 0 4px; backdrop-filter: none; -webkit-backdrop-filter: none; }
+        .content-figure { overflow: visible; border-radius: 0; }
+        .content-figure img { border-radius: 18px; }
+        .facts-grid { grid-template-columns: 1fr; }
+        .article-cta-actions { flex-direction: column; align-items: stretch; width: 100%; }
+      }
+
+      .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      /* ===== Podcast article extras: lists, comparison table, FAQ ===== */
+      .article-body ul, .article-body ol { margin: 0 0 22px; padding-left: 1.3em; }
+      .article-body li { margin-bottom: 10px; padding-left: 4px; }
+      .article-body li::marker { color: var(--kicker); font-weight: 700; }
+      .article-body li strong, .article-body p strong { color: var(--text-main); }
+      .article-body p a, .article-body li a {
+        color: var(--text-main);
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: var(--yellow);
+        text-decoration-thickness: 3px;
+        text-underline-offset: 3px;
+      }
+      .article-body p a:hover, .article-body li a:hover { background: rgba(244,237,0,.35); }
+      .article-layout > * { min-width: 0; } /* let the table scroll inside its box instead of widening the page */
+      .table-wrap { margin: 26px 0 30px; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); }
+      .compare-table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 0.95rem; line-height: 1.5; }
+      .compare-table th, .compare-table td { padding: 14px 18px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+      .compare-table thead th { background: var(--ink); color: #fff; font-weight: 600; }
+      .compare-table tbody th { width: 26%; background: var(--panel); color: var(--text-main); font-weight: 600; }
+      .compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: 0; }
+      .faq-list { display: grid; gap: 12px; margin: 10px 0 8px; }
+      .faq-item { padding: 20px 22px; border-radius: var(--radius); background: var(--panel); }
+      .faq-item h3 { margin: 0 0 6px; font-size: 1.08rem; }
+      .faq-item p { margin: 0; font-size: 0.98rem; }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://takeescowork.com/why-people-are-switching-their-workspace-from-home#article",
+      "headline": "Why People Are Switching Their Workspace from Home",
+      "description": "Working from home isn't working for everyone. Here's why remote workers, freelancers and startups are moving to coworking spaces, and what they get.",
+      "url": "https://takeescowork.com/why-people-are-switching-their-workspace-from-home",
+      "mainEntityOfPage": {
+        "@id": "https://takeescowork.com/why-people-are-switching-their-workspace-from-home#webpage"
+      },
+      "image": "https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=1200&h=630&q=80",
+      "datePublished": "2026-11-20T09:00:00+05:30",
+      "dateModified": "2026-11-20T09:00:00+05:30",
+      "inLanguage": "en-IN",
+      "author": {
+        "@id": "https://takeescowork.com/#business"
+      },
+      "publisher": {
+        "@id": "https://takeescowork.com/#business"
+      },
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Coworking space"
+        },
+        {
+          "@type": "Thing",
+          "name": "Remote work"
+        },
+        {
+          "@type": "Thing",
+          "name": "Working from home"
+        }
+      ],
+      "keywords": "coworking vs working from home, coworking space in Kannur, benefits of a coworking space, coworking space for freelancers, day pass coworking Kannur"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://takeescowork.com/why-people-are-switching-their-workspace-from-home#webpage",
+      "url": "https://takeescowork.com/why-people-are-switching-their-workspace-from-home",
+      "name": "Why People Are Switching Their Workspace from Home | Takees Cowork",
+      "description": "Working from home isn't working for everyone. Here's why remote workers, freelancers and startups are moving to coworking spaces, and what they get.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://takeescowork.com/#website",
+        "url": "https://takeescowork.com/",
+        "name": "Takees Cowork",
+        "publisher": {
+          "@id": "https://takeescowork.com/#business"
+        }
+      },
+      "breadcrumb": {
+        "@id": "https://takeescowork.com/why-people-are-switching-their-workspace-from-home#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://takeescowork.com/why-people-are-switching-their-workspace-from-home#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://takeescowork.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://takeescowork.com/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why People Are Switching Their Workspace from Home"
+        }
+      ]
+    },
+    {
+      "@type": "CoworkingSpace",
+      "@id": "https://takeescowork.com/#business",
+      "name": "Takees Cowork",
+      "url": "https://takeescowork.com/",
+      "logo": "https://takeescowork.com/takees-t-logo.png",
+      "image": "https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=1200&h=630&q=80",
+      "telephone": "+91-88483-30091",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Takees Park, Mele Chovva Road, Airport Road, opposite Cindrebay School of Design, Elayavoor",
+        "addressLocality": "Kannur",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "21:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Kannur"
+      },
+      "sameAs": [
+        "https://www.instagram.com/takeescowork/",
+        "https://www.linkedin.com/company/takees-co-works/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://takeescowork.com/why-people-are-switching-their-workspace-from-home#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is coworking better than working from home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your home. Coworking helps most if you get distracted easily, feel lonely or have weak Wi-Fi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a coworking space cost in Kannur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prices depend on the plan you choose, such as a day pass or a monthly desk. Call Takees Cowork on +91 88483 30091 to know the current plans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a coworking space for just one day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Many coworking spaces offer a day pass, so you can work for a single day without a monthly plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can remote employees of big companies use coworking spaces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You only need a laptop and internet, so a coworking desk can be your daily office."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I register my business at a coworking address?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some coworking spaces allow this for GST and company registration. Ask the space before you sign up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there coworking spaces in Kannur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Kannur has several coworking spaces in and around the town. Takees Cowork is one of them, on Airport Road at Mele Chovva."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="wrap topbar">
+        <a href="/" class="brand" aria-label="Takees Cowork home">
+          <img class="brand-logo" src="./Cowork%20logo%20header.png" alt="Takees Cowork Logo" />
+        </a>
+
+        <nav class="navlinks" id="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/amenities">Amenities</a>
+          <a href="/plan">Plan</a>
+          <a href="blogs" class="is-active">Blogs</a>
+          <a href="/contact">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Article hero -->
+      <div class="article-hero-card">
+        <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=1800&q=80" alt="People working at shared desks in a busy coworking space" />
+        <div class="hero-top">
+          <nav class="breadcrumb glass" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="sep">/</span>
+            <a href="blogs">Blogs</a>
+            <span class="sep">/</span>
+            <span>Switching from home</span>
+          </nav>
+          <a href="blogs" class="back-link glass">
+            <span aria-hidden="true">←</span> Back to Blogs
+          </a>
+        </div>
+        <span class="tag on-dark">Workspace Guide • Coworking</span>
+        <h1 class="article-title">Why People Are Switching Their Workspace from Home</h1>
+        <p class="article-lead">
+          Why people are switching, who is moving, and how to choose a coworking space.
+        </p>
+        <div class="featured-badge glass">
+          <strong>Coworking vs Work from Home</strong> • Takees Cowork, Kannur
+        </div>
+      </div>
+
+      <div class="article-meta-bar">
+        <div class="author-info">
+          <div class="author-avatar" title="Takees Cowork">
+            <img src="./takees-t-logo.png" alt="Takees Cowork" />
+          </div>
+          <div>
+            <div class="author-name">Takees Cowork Team</div>
+            <div class="article-date">Published on Nov 20, 2026 • 7 min read • Workspace &amp; Coworking</div>
+          </div>
+        </div>
+        <div class="article-share">
+          <a class="share-btn" href="https://wa.me/?text=Why%20People%20Are%20Switching%20Their%20Workspace%20from%20Home%20-%20Takees%20Cowork%20https%3A%2F%2Ftakeescowork.com%2Fwhy-people-are-switching-their-workspace-from-home" target="_blank" rel="noopener noreferrer">
+            <span>Share WhatsApp</span>
+          </a>
+          <a class="share-btn" href="Brochure%20@cowork.pdf" download="Takees-Cowork-Brochure.pdf" target="_blank" rel="noopener noreferrer">
+            <span>Brochure PDF</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Article Content + Sidebar Layout -->
+      <div class="article-layout">
+        <article class="article-body">
+          <p>
+            You open your laptop on the dining table. Five minutes into a client call, the pressure cooker whistles. Then the power goes off, and your Wi-Fi goes with it.
+          </p>
+          <p>
+            If this sounds like your workday, you're not alone. Working from home felt easy at first. No traffic, no dress code, tea whenever you want. But for many people, home has slowly become a hard place to get real work done.
+          </p>
+          <p>
+            That's why more people are choosing coworking spaces. A coworking space is a shared office where you pay for a desk by the day or the month. The Wi-Fi, power, furniture and meeting rooms come with it.
+          </p>
+          <p>
+            Below, you'll see why people are switching, who is moving, and how to choose a space. If you're weighing coworking vs. working from home, this will help you decide.
+          </p>
+
+          <h2 id="wfh-hard">What Makes Working from Home So Hard?</h2>
+          <p>
+            The four biggest problems are distractions, no clear end to the workday, loneliness and a setup that was never meant for work.
+          </p>
+          <figure class="content-figure">
+            <img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=1400&q=80" alt="Laptop showing a video call next to a coffee mug on a table at home" loading="lazy" />
+            <figcaption>For many people, the dining table became the office.</figcaption>
+          </figure>
+
+          <h3>Constant distractions at home</h3>
+          <p>
+            At home, someone always needs you. A relative drops by. The delivery boy calls. The TV is on in the next room, and the kids have online class at full volume.
+          </p>
+          <p>
+            Each small break feels harmless. But getting back into deep focus takes time, and a few breaks an hour can eat your whole morning.
+          </p>
+
+          <h3>Work never really ends.</h3>
+          <p>
+            When your bedroom is also your office, work follows you everywhere. You check one email at 11 PM, then reply to three more.
+          </p>
+          <p>
+            A lot of freelancers know this habit: they "just finish one more task" every night. Without a door to walk out of, the workday has no finish line.
+          </p>
+
+          <h3>Working alone every day</h3>
+          <p>
+            At home, there's no one to ask a quick question or share a small win with. Some people enjoy the quiet at first. After a few months, many start to feel cut off.
+          </p>
+
+          <h3>A home setup that isn't built for work</h3>
+          <p>
+            A dining chair is fine for dinner, not for eight hours of typing. Back pain and neck pain creep in.
+          </p>
+          <p>
+            Home Wi-Fi slows down when the whole family is streaming. And during the Kerala monsoon, a power cut can end your workday without warning.
+          </p>
+
+          <h2 id="why-moving">Why Are People Moving to Coworking Spaces?</h2>
+          <p>
+            People move to coworking spaces because they get a quiet, ready-made office without the cost of renting one. Here are the main benefits of a coworking space.
+          </p>
+
+          <h3>It's easier to focus.</h3>
+          <p>
+            A coworking space is set up for one thing: work. When everyone around you is busy, it's easier to get busy too. There's no bed calling you for a quick nap.
+          </p>
+
+          <h3>A proper place to meet clients</h3>
+          <p>
+            Meeting a client in a noisy café or in your living room doesn't look very professional. A coworking space gives you a clean desk and a meeting room where you can talk properly.
+          </p>
+
+          <h3>Work stays at work.</h3>
+          <p>
+            When you leave the space, your workday ends. Home becomes a place to relax again.
+          </p>
+
+          <h3>You meet new people.</h3>
+          <p>
+            In a coworking space, the person at the next desk might be a designer, a developer or a small business owner. One Takees member wrote that they met people from different career backgrounds and were even invited to an iftar party.
+          </p>
+
+          <h3>Reliable Wi-Fi and power backup</h3>
+          <p>
+            You don't need to worry about slow internet or power cuts. Good spaces take care of both, so a monsoon storm doesn't ruin your deadline.
+          </p>
+
+          <h3>Flexible plans</h3>
+          <p>
+            There's no yearly contract. Take a day pass for one day or a monthly desk for a regular seat.
+          </p>
+
+          <h3>Cheaper than renting an office</h3>
+          <p>
+            Your own office means a deposit, furniture, internet and electricity bills. In a coworking space, one fee covers it all.
+          </p>
+
+          <h3>A business address</h3>
+          <p>
+            Some coworking spaces let you use their address for your business, GST registration and letters. This helps if you don't want to use your home address.
+          </p>
+
+          <h2 id="who-switching">Who Is Switching to Coworking?</h2>
+          <p>Anyone who works on a laptop can use one. These four groups often make the switch.</p>
+          <ul>
+            <li><strong>Freelancers and creators.</strong> Designers, writers and video editors need quiet hours, fast uploads and a place to meet clients. A coworking space for freelancers gives them all three.</li>
+            <li><strong>Remote and hybrid employees.</strong> Some people in Kannur work for companies in Bengaluru, Kochi or the Gulf. They need an office-like place close to home.</li>
+            <li><strong>Startups and small teams.</strong> A team of two to five people may not be ready to rent a full office. Shared desks or a small cabin let them grow step by step.</li>
+            <li><strong>Students and exam aspirants.</strong> Students preparing for PSC, bank or other exams need long, quiet hours. A desk away from home helps them follow a study routine.</li>
+          </ul>
+
+          <h2 id="home-makes-sense">When Working from Home Still Makes Sense</h2>
+          <p>
+            Coworking isn't right for everyone. If you have a quiet room, a good chair, steady internet and enjoy working alone, home can work well for you.
+          </p>
+          <p>
+            Coworking also has costs. There's a membership fee, travel time to the space, and sometimes a little noise from others.
+          </p>
+          <p>
+            Many people choose a middle path. They work from home on quiet days and book a day pass when they need focus or have a client meeting.
+          </p>
+
+          <h2 id="comparison">Coworking vs Work from Home: A Quick Comparison</h2>
+          <div class="table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr><th scope="col">Factor</th><th scope="col">Work from home</th><th scope="col">Coworking space</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Focus</th><td>Easy to get distracted by family, guests and chores</td><td>Built for work, with fewer interruptions</td></tr>
+                <tr><th scope="row">Monthly cost</th><td>No rent, but you pay for extra electricity and internet.</td><td>One membership fee, with Wi-Fi and power included</td></tr>
+                <tr><th scope="row">Meeting people</th><td>Mostly alone</td><td>People from different fields around you</td></tr>
+                <tr><th scope="row">Wi-Fi and power</th><td>Depends on your home connection and power cuts.</td><td>Shared high-speed Wi-Fi, ready to use</td></tr>
+                <tr><th scope="row">Work-life balance</th><td>Work and home mix together.</td><td>Clear start and end to your day</td></tr>
+                <tr><th scope="row">Meeting clients</th><td>Café or living room</td><td>Professional desk or meeting room</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            In short, home saves travel and fees. Coworking gives you focus, structure and a professional place to work.
+          </p>
+
+          <h2 id="choose">How to Choose the Right Coworking Space in Kannur</h2>
+          <p>Check these five things before you join.</p>
+          <ol>
+            <li><strong>Location and commute.</strong> Pick a place close to home or on your daily route. Ask about parking for your bike or car.</li>
+            <li><strong>Internet and power.</strong> Ask to test the Wi-Fi speed. Check what happens during a power cut.</li>
+            <li><strong>Pricing plans.</strong> Compare day passes, monthly desks and private cabins. Ask what's included, like tea, coffee or printing.</li>
+            <li><strong>Atmosphere.</strong> Some spaces are quiet; others are lively. Look at how clean it is and how helpful the staff are.</li>
+            <li><strong>Try before you join.</strong> Book a single day first. One full workday will tell you more than any photo.</li>
+          </ol>
+          <div class="callout-box">
+            <strong>Is coworking right for you? A quick check:</strong>
+            <ul>
+              <li>Do you get distracted at home more than once an hour?</li>
+              <li>Do you often work late because your day has no clear end?</li>
+              <li>Do you feel lonely working alone?</li>
+              <li>Does your Wi-Fi or power often let you down?</li>
+              <li>Do you need a proper place to meet clients?</li>
+            </ul>
+            If you said yes to two or more, a coworking space is worth trying.
+          </div>
+
+          <h2 id="why-takees">Why Choose Takees Cowork</h2>
+          <p>
+            <a href="/">Takees Cowork</a> is a coworking space on Airport Road in Kannur, open from 9 AM to 9 PM, Monday to Saturday. It's at Takees Park, Mele Chovva Road, opposite Cindrebay School of Design, Elayavoor.
+          </p>
+          <p>
+            It's a good fit for freelancers, remote workers, startups and students who want a calm, professional place to work. To know the current plans, call or visit us.
+          </p>
+          <p>
+            Takees Cowork has a 4.7 out of 5 rating on Google from 30 reviews (November 2026). Reviewers often mention the calm vibe, clean washrooms and friendly staff.
+          </p>
+
+          <h2 id="conclusion">Conclusion</h2>
+          <p>
+            Home is a great place to live, but it isn't always the best place to work. Distractions, long nights and patchy Wi-Fi add up over time.
+          </p>
+          <p>
+            You don't have to decide forever. Try one full day in a coworking space and notice how your focus feels.
+          </p>
+
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <h3>Is coworking better than working from home?</h3>
+              <p>It depends on your home. Coworking helps most if you get distracted easily, feel lonely or have weak Wi-Fi.</p>
+            </div>
+            <div class="faq-item">
+              <h3>How much does a coworking space cost in Kannur?</h3>
+              <p>Prices depend on the plan you choose, such as a day pass or a monthly desk. Call Takees Cowork on +91 88483 30091 to know the current plans.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Can I use a coworking space for just one day?</h3>
+              <p>Yes. Many coworking spaces offer a day pass, so you can work for a single day without a monthly plan.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Can remote employees of big companies use coworking spaces?</h3>
+              <p>Yes. You only need a laptop and internet, so a coworking desk can be your daily office.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Can I register my business at a coworking address?</h3>
+              <p>Some coworking spaces allow this for GST and company registration. Ask the space before you sign up.</p>
+            </div>
+            <div class="faq-item">
+              <h3>Are there coworking spaces in Kannur?</h3>
+              <p>Yes. Kannur has several coworking spaces in and around the town. Takees Cowork is one of them, on Airport Road at Mele Chovva.</p>
+            </div>
+          </div>
+
+          <h2 id="visit">Visit Takees Cowork</h2>
+          <p>
+            Want to see if coworking works for you? Come visit Takees Cowork and see the space for yourself.
+          </p>
+          <ul>
+            <li><strong><a href="/contact">Schedule a visit</a></strong></li>
+            <li><strong>Call:</strong> <a href="tel:+918848330091">+91 88483 30091</a></li>
+          </ul>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar">
+          <div class="sidebar-card">
+            <span class="tag">Table of Contents</span>
+            <ul class="toc-list">
+              <li><a href="#wfh-hard">1. Why Home Is Hard</a></li>
+              <li><a href="#why-moving">2. Why People Are Moving</a></li>
+              <li><a href="#who-switching">3. Who Is Switching</a></li>
+              <li><a href="#home-makes-sense">4. When Home Makes Sense</a></li>
+              <li><a href="#comparison">5. Quick Comparison</a></li>
+              <li><a href="#choose">6. How to Choose a Space</a></li>
+              <li><a href="#why-takees">7. Why Takees Cowork</a></li>
+              <li><a href="#faq">8. FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="cowork-promo-card">
+            <h3>Try a full day here</h3>
+            <p>Coworking on Airport Road, Kannur. Open 9 AM to 9 PM, Monday to Saturday.</p>
+            <a href="https://wa.me/+918848330091?text=Hi%2C%20I'd%20like%20to%20schedule%20a%20visit%20to%20Takees%20Cowork." class="btn btn-dark btn-arrow" target="_blank" rel="noopener noreferrer">
+              Schedule a Visit
+            </a>
+          </div>
+
+          <div class="sidebar-card">
+            <span class="tag">Official Brochure</span>
+            <p class="brochure-text">
+              Download the complete Takees Cowork brochure covering pricing, cubicles, virtual office, and enterprise solutions.
+            </p>
+            <a href="Brochure%20@cowork.pdf" download="Takees-Cowork-Brochure.pdf" class="btn btn-dark">
+              Download Brochure
+            </a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- CTA + footer -->
+    <div class="closing">
+      <div class="wrap">
+        <div class="closing-card">
+          <section class="cta-band article-cta">
+            <div>
+              <span class="tag on-dark">Takees Cowork Kannur</span>
+              <h2>Start Your Journey With Takees Cowork</h2>
+              <p>
+                Whether you need a dedicated desk for remote work, a private cabin, or a meeting room in Kannur, we provide everything you need to stay productive.
+              </p>
+            </div>
+            <div class="cta-side">
+              <div class="article-cta-actions">
+                <a href="https://wa.me/+918848330091" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+                <a href="/plan" class="btn btn-glass">Explore Plans</a>
+                <a href="/contact" class="btn btn-glass">Contact Us</a>
+              </div>
+            </div>
+          </section>
+
+          <footer class="site-footer">
+            <div class="footer-grid">
+              <div class="footer-brand">
+                <a href="/" class="brand" aria-label="Takees Cowork home">
+                  <img class="brand-logo" src="./Cowork%20logo%20(1).png" alt="Takees Cowork" />
+                </a>
+                <p>You run the business. We run the workspace. Comprehensive digital and physical infrastructure for ambitious teams in Kannur &amp; Bangalore.</p>
+                <address>
+                  Takees Park, Airport Road, Mele Chovva, Kannur, Kerala 670006<br>
+                  <a href="tel:+918848330091">+91 88483 30091</a>
+                </address>
+              </div>
+              <div class="footer-col">
+                <h4>Sister Brands</h4>
+                <div class="pill-links">
+                  <a href="https://takees.in/" target="_blank" rel="noopener noreferrer">Takees Marketing</a>
+                  <a href="https://takeescowork.com/" target="_blank" rel="noopener noreferrer">Takees Co-work</a>
+                  <a href="https://takees.in/" target="_blank" rel="noopener noreferrer">Takees Estates</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              <span>© 2026 Takees Cowork. All rights reserved. Powered by <a class="powered-link" href="https://takees.in/" target="_blank" rel="noopener noreferrer">Takees Marketing</a>.</span>
+              <div class="footer-legal">
+                <span>Privacy Policy</span>
+                <span>Terms of Service</span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a class="floating-chat" href="https://wa.me/+918848330091" target="_blank" rel="noopener noreferrer" aria-label="Chat with Takees Cowork on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M20 11.7a8.1 8.1 0 0 1-11.9 7.1L4 20l1.2-4a8.1 8.1 0 1 1 14.8-4.3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M9 8.2c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.1.4 0 .6.5.8 1.2 1.5 2 1.9.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1-.6 1.3-.4.4-1 .6-1.6.5-1-.1-2.1-.6-3.3-1.7-1.3-1.1-2-2.4-2.3-3.4-.3-.9 0-1.7.4-2.2Z" fill="currentColor"/>
+      </svg>
+    </a>
+    <script>
+      // Table of contents: scroll to the section without adding #section to the address
+      (() => {
+        if (location.hash) {
+          const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+          history.replaceState(null, "", location.pathname + location.search);
+          if (target) window.addEventListener("load", () => target.scrollIntoView({ behavior: "instant" }));
+        }
+        document.addEventListener("click", (e) => {
+          const a = e.target.closest('a[href^="#"]');
+          if (!a) return;
+          const target = document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1)));
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+        });
+      })();
+    </script>
+    <script>
+      // Phone menu toggle
+      (() => {
+        const header = document.querySelector("header");
+        const toggle = header.querySelector(".menu-toggle");
+        const setOpen = (open) => {
+          header.classList.toggle("nav-open", open);
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        };
+        toggle.addEventListener("click", () => setOpen(!header.classList.contains("nav-open")));
+        header.querySelectorAll(".navlinks a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
+      })();
+    </script>
+  </body>
+</html>
